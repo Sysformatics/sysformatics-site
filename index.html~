@@ -12,7 +12,7 @@
     <style type="text/css">
       body {
         padding-top:156px;
-        padding-bottom: 10px;
+        padding-bottom: 20px;
       }
       @media (max-width:767px){
       body {padding-top:51px;}    
@@ -161,9 +161,7 @@
       padding-bottom: 15px;
       }
 
-      /* MISC
-      -------------------------------------------------- */
-      .thumbnail-fix {
+      .thumbnail {
       margin-top: 20px;
       }
       
@@ -182,24 +180,7 @@
       background-image:     -ms-linear-gradient(left, #7A849A, #4E5C7C, #7A849A); 
       background-image:      -o-linear-gradient(left, #7A849A, #4E5C7C, #7A849A);
       }
-      
-      .container {
-      max-width: 1000px;
-      }
-      
-      .ul-fix {
-      padding-left: 20px;
-      }
 
-      .h3-fix {
-      margin-top: 10px;
-      text-align: center;
-      }
-
-      @media (max-width: 767px){
-      .footer-margin {margin-left:15px;margin-right:15px;}
-      }      
-      
     </style>
 
     <!-- Fav and touch icons -->
@@ -360,7 +341,7 @@
           <div class="item">
             <img src="sys/assets/img/ID-201308082340.jpg" alt="">
             <div class="carousel-caption">
-              <h3>Web Design & Development</h3>
+              <h3>Web Design & Dev</h3>
 	      <div class="hidden-sm">
 		<p>Sysformatics can assist with your web design and development needs from the simplest static single page to the most complex web applications</p>
               </div>
@@ -369,7 +350,7 @@
 	  <div class="item">
             <img src="sys/assets/img/ID-201308100121.jpg" alt="">
             <div class="carousel-caption">
-              <h3>IT Support Services</h3>
+              <h3>Support Services</h3>
 	      <div class="hidden-sm">
 		<p>Sysformatics offers a preventative monitoring service designed for firms that wish to have their IT infrastructure monitored on an on-going basis.</p>
               </div>
@@ -386,60 +367,49 @@
 
       <!-- MARKETING CONTENT -->
       <div class="row">
-        <div class="col-lg-3 col-sm-3">
-          <div class="thumbnail thumbnail-fix">
-            <img src="sys/assets/img/ID-201308100821.jpg" class="img-responsive" alt=""> <!--"http://placehold.it/360x200" alt="">-->
+        <div class="col-lg-4 col-sm-4">
+          <div class="thumbnail">
+	    <div class="caption">
+	      <h3 style="text-align:center">Online Data Backup</h3>
+	    </div>
+            <img src="sys/assets/img/ID-100157178.jpg" class="img-responsive" alt=""> <!--"http://placehold.it/360x200" alt="">-->
             <div class="caption">
-	      <h3 class="h3-fix">Online Data Backup</h3>
-	      <ul class="ul-fix">
+	      <ul>
 		<li>Automate company data backups</li>
 		<li>Eliminate human error</li>
-		<li>Increase data security and business continuity</li>
+		<li>Increase data security and business continuity preparedness</li>
 	      </ul>
               <p></p>
 	      <p><a href="#" class="btn btn-primary">View details &raquo;</a></p>
             </div>
           </div>
         </div>
-	<div class="col-lg-3 col-sm-3">
-          <div class="thumbnail thumbnail-fix">
-            <img src="sys/assets/img/ID-201308100825.jpg" class="img-responsive" alt="">
+        <div class="col-lg-4 col-sm-4">
+          <div class="thumbnail">
+	    <div class="caption">
+	      <h3 style="text-align:center">Web Desing & Development</h3>
+	    </div>
+            <img src="sys/assets/img/ID-100130851.jpg" class="img-responsive" alt="">
             <div class="caption">
-	      <h3 class="h3-fix">Email Management</h3>
-	      <ul class="ul-fix">
-		<li>Increase system service life</li>
-		<li>Improve system reliability and performance</li>
-		<li>Decrease system downtime</li>
-		<li>Save time and money</li>
-	      </ul>
-              <p></p>
-              <p><a href="#" class="btn btn-primary">View details &raquo;</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-sm-3">
-          <div class="thumbnail thumbnail-fix">
-            <img src="sys/assets/img/ID-201308100827.jpg" class="img-responsive" alt="">
-            <div class="caption">
-	      <h3 class="h3-fix">Web Desing & Development</h3>
-	      <ul class="ul-fix">
+	      <ul>
 		<li>Bespoke Designs</li>
-		<li>Internet Marketing</li>
-		<li>Search Engine Optimisation</li>
+		<li>Social Media</li>
 		<li>Content Management</li>
-		<li>Web Applications</li>
+		<li>Web Hosting</li>
 	      </ul>
               <p></p>
 	      <p><a href="#" class="btn btn-primary">View details &raquo;</a></p>
             </div>
           </div>
         </div>
-	<div class="col-lg-3 col-sm-3">
-          <div class="thumbnail thumbnail-fix">
-            <img src="sys/assets/img/ID-201308100851.jpg" class="img-responsive" alt="">
+        <div class="col-lg-4 col-sm-4">
+          <div class="thumbnail">
+	    <div class="caption">
+	      <h3 style="text-align:center">Preventive IT Maintenance</h3>
+	    </div>
+            <img src="sys/assets/img/ID-10069913.jpg" class="img-responsive" alt="">
             <div class="caption">
-	      <h3 class="h3-fix">IT Support Services</h3>
-	      <ul class="ul-fix">
+	      <ul>
 		<li>Increase system service life</li>
 		<li>Improve system reliability and performance</li>
 		<li>Decrease system downtime</li>
@@ -462,9 +432,8 @@
 
       <hr>
 
-      <footer class="footer-margin">
-        <p><a href="#">Store</a> &middot; <a href="#">Support</a> &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a> &middot; <a href="#">About</a> &middot; <a href="#">Contact</a></p>
-<p>&copy; 2013 Sysformatics.</p>
+      <footer>
+        <p>&copy; 2013 Sysformatics. &middot; <a href="#">Store</a> &middot; <a href="#">Support</a> &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a> &middot; <a href="#">About</a> &middot; <a href="#">Contact</a></p>
       </footer>
 
     </div> <!-- /container -->
@@ -480,6 +449,16 @@
 
       // carousel
       $('.carousel').carousel()
+
+      // fix for dropdown menus
+      /*$('.dropdown-toggle').click(function(e) {
+      e.preventDefault();
+      setTimeout($.proxy(function() {
+      if ('ontouchstart' in document.documentElement) {
+      $(this).siblings('.dropdown-backdrop').off().remove();
+      }
+      }, this), 0);
+      });*/
 
       })
       }(window.jQuery)
