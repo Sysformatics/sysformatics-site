@@ -43,7 +43,7 @@
       padding-top: 41px;
       padding-right: 2px;
       }
-      @media (max-width: 1000px){
+      @media (max-width: 900px){
       .header h4 {padding-top: 65px;}
       }
       
@@ -166,7 +166,15 @@
       .thumbnail-fix {
       margin-top: 20px;
       }
-      
+      @media (min-width: 767px) {
+      .thumbnail-fix {min-height:440px;}
+      .btn-fix-bottom {position:absolute;bottom:20px;}
+      }
+      @media (min-width: 1010px) {
+      .thumbnail-fix {min-height:200px;}
+      .btn-fix-bottom {position:inherit;bottom:inherit;}
+      }
+
       .col-padd-fix {
       padding-left: 0;
       padding-right: 0;
@@ -186,7 +194,13 @@
       .container {
       max-width: 1000px;
       }
-      
+      @media (min-width: 767px){
+      .container {padding-left:10px;padding-right:10px;}
+      }
+      @media (min-width: 1010px){
+      .container {padding-left:0px;padding-right:0px;}
+      }
+     
       .ul-fix {
       padding-left: 20px;
       }
@@ -198,13 +212,29 @@
 
       @media (max-width: 767px){
       .footer-margin {margin-left:15px;margin-right:15px;}
-      }      
+      }
       
     </style>
 
     <!-- Fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" href="sys/assets/ico/apple-touch-icon.png">
     <link rel="shortcut icon" href="sys/assets/ico/favicon.ico">
+
+    <!-- Google Analytics BEGIN -->
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-35786145-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    <!-- Google Analytics END -->
 
   </head>
 
@@ -397,7 +427,7 @@
 		<li>Increase data security and business continuity</li>
 	      </ul>
               <p></p>
-	      <p><a href="#" class="btn btn-primary">View details &raquo;</a></p>
+	      <p><a href="#" class="btn btn-primary btn-fix-bottom">View details &raquo;</a></p>
             </div>
           </div>
         </div>
@@ -413,7 +443,7 @@
 		<li>Save time and money</li>
 	      </ul>
               <p></p>
-              <p><a href="#" class="btn btn-primary">View details &raquo;</a></p>
+              <p><a href="#" class="btn btn-primary btn-fix-bottom">View details &raquo;</a></p>
             </div>
           </div>
         </div>
@@ -430,7 +460,7 @@
 		<li>Web Applications</li>
 	      </ul>
               <p></p>
-	      <p><a href="#" class="btn btn-primary">View details &raquo;</a></p>
+	      <p><a href="#" class="btn btn-primary btn-fix-bottom">View details &raquo;</a></p>
             </div>
           </div>
         </div>
@@ -446,15 +476,14 @@
 		<li>Save time and money</li>
 	      </ul>
               <p></p>
-              <p><a href="#" class="btn btn-primary">View details &raquo;</a></p>
+              <p><a href="#" class="btn btn-primary btn-fix-bottom">View details &raquo;</a></p>
             </div>
           </div>
         </div>
       </div>
 
-      <hr>
-
       <footer class="footer-margin">
+	<hr>
         <p><a href="#">Store</a> &middot; <a href="#">Support</a> &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a> &middot; <a href="#">About</a> &middot; <a href="#">Contact</a></p>
 <p>&copy; 2013 Sysformatics.</p>
       </footer>
@@ -497,6 +526,22 @@
       });
     </script>
     <!-- AddThis Smart Layers END -->
+
+    <!-- Google Analytics BEGIN -->
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-35786145-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    <!-- Google Analytics END -->
 
   </body>
 </html>
