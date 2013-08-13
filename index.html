@@ -1,219 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
     <title>Sysformatics</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
     <meta name="author" content="Sysformatics">
+    <meta name="description" content="Sisformatics provides you with intelligent information solutions that can learn and evolve with your business.">
+    <meta name="keywords" content="online data backup,backup,emial management,email,web design,web development,it support,it support services,preventive it maintenance,it maintenance">
 
     <!-- STYLES -->
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
-    <style type="text/css">
-      body {
-        padding-top:156px;
-        padding-bottom: 10px;
-      }
-      @media (max-width:767px){
-      body {padding-top:51px;padding-bottom:45px;}    
-      }
-    </style>
-
     <link href="sys/assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="sys/assets/css/social-buttons.css" rel="stylesheet">
     <link href="sys/assets/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link href="sys/assets/css/systrap.css" rel="stylesheet">
 
     <style type="text/css">
-
+      
       /* HEADER & LOGOS
       ------------------------------------------------- */
-      .header {
-      background-color: #ffffff;
-      }
       .header .container {
       background-image: url(sys/assets/img/sysformatics.svg);
-      background-repeat: no-repeat;
-      background-size: 300px auto;
-      background-position: left center;
-      height: 100px;
-      }
-      .header h4 {
-      font-weight: normal;
-      text-align: right;
-      padding-top: 41px;
-      padding-right: 2px;
-      }
-      @media (max-width: 900px){
-      .header h4 {padding-top: 65px;}
-      }
-      
-      /* CUSTOMISE NAVIGATION BAR
-      ------------------------------------------------------ */
-      .navbar {
-      padding-left: 0;
-      padding-right: 0;
-      }
-      .navbar-inverse .navbar-brand {
-      color: #F0FFFF;
-      font-size: 20px;
-      float: left;
-      padding-left: 7px;
-      }
-      .navbar-toggle {
-      background-color: #4F5D7D;
-      padding: 6px;
-      width: 35px;
-      right: 7px;
-      }
-      .navbar-inverse .navbar-inner {
-      background-color: #B9BDC7;
-      background-image: linear-gradient(to bottom, #B9BDC7, #7A849A);
-      background-repeat: repeat-x;
-      border: 1px solid #0A2350;
-      }
-      .navbar .nav > li > a {
-      color:  #0A2350;
-      text-shadow: 0 1px 0 #7A849A;
-      border-radius: 0;
-      }
-      .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
-      background-color: #4F5D7D;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125) inset;
-      color: #ffffff;
-      text-decoration: none;
-      }
-      .navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner {
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-      }
-      .navbar-inner-nav{
-      background-color: #0AC2F5;
-      background-image: linear-gradient(to bottom, #0AC2F5, #0AC2F5);
-      background-repeat: repeat-x;
-      border-bottom: 1px solid #068AAF;
-      box-shadow: 0 1px 10px rgba(0, 0, 0, 0);
-      }
-      .navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner {
-      border-width: 1px 0;
       }
 
-      /* CUSTOMISE DROPDOWN MENUS
-      -------------------------------------------------- */
-      .navbar .nav li.dropdown > .dropdown-toggle .caret {
-      border-bottom-color: #0A2350;
-      border-top-color: #0A2350;
-      }
-      .navbar .nav li.dropdown>a:hover .caret,.navbar .nav li.dropdown>a:focus .caret {
-      border-top-color:#ffffff;
-      border-bottom-color:#ffffff;
-      }
-      .navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle {
-      background-color: #4F5D7D;
-      color: #ffffff;
-      }
-      .dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-submenu:hover>a,.dropdown-submenu:focus>a {
-      text-decoration:none;
-      color:#ffffff;
-      background-color: #0AC2F5;
-      background-repeat: repeat-x;
-      background-image: linear-gradient(to bottom, #0AC2F5, #07BBF1);
-      }
-      .navbar-inner-nav .dropdown-menu>li>a:hover,.navbar-inner-nav .dropdown-menu>li>a:focus,.navbar-inner-nav .dropdown-submenu:hover>a,.navbar-inner-nav .dropdown-submenu:focus>a {
-      background-color: #4F5D7D;
-      background-image: linear-gradient(to bottom, #4F5D7D, #4F5D7D);
-      background-repeat: repeat-x;
-      color: #ffffff;
-      }
-      .dropdown .dropdown-menu .nav-header {
-      padding-left: 19px;
-      }
-      .dropdown .dropdown-menu .dropdown-item-adj {
-      padding-left: 26px;
-      }
-      .btn-store-m-top {
-      padding: 0px 0px 0px 0px;
-      font-size: 25px;
-      margin-top: 9px;
-      width:35px;
-      height:32px;
-      line-height: 1px;
-      }
-      .navbar .nav li.dropdown.open > .dropdown-toggle .caret, .navbar .nav li.dropdown.active > .dropdown-toggle .caret, .navbar .nav li.dropdown.open.active > .dropdown-toggle .caret {
-      border-bottom-color: #ffffff;
-      border-top-color: #ffffff;
-      }
-      .navbar-inverse .navbar-toggle:hover, navbar-inverse .navbar-toggle:focus {
-      background-color: #4F5D7D;
-      }
-      /*
-      .navbar .nav>li>a:focus,.navbar .nav>li>a:hover {
-      background-color:transparent;
-      color:#ffffff;
-      text-decoration:none;
-      }  
-      */
-      
-      /* CAROUSEL
-      --------------------------------------------------- */
-      .carousel-indicators {
-      bottom: 5px;
-      }
-      .carousel-caption {
-      padding-bottom: 15px;
-      }
-
-      /* MISC
-      -------------------------------------------------- */
-      .thumbnail-fix {
-      margin-top: 20px;
-      }
-      @media (min-width: 767px) {
-      .thumbnail-fix {min-height:440px;}
-      .btn-fix-bottom {position:absolute;bottom:20px;}
-      }
-      @media (min-width: 1010px) {
-      .thumbnail-fix {min-height:200px;}
-      .btn-fix-bottom {position:inherit;bottom:inherit;}
-      }
-
-      .col-padd-fix {
-      padding-left: 0;
-      padding-right: 0;
-      }
-
-      hr.style-one {
-      border: 0;
-      height: 1px;
-      margin: 50px 0 -7px 0;
-      background: #333;
-      background-image: -webkit-linear-gradient(left, #7A849A, #4E5C7C, #7A849A); 
-      background-image:    -moz-linear-gradient(left, #7A849A, #4E5C7C, #7A849A); 
-      background-image:     -ms-linear-gradient(left, #7A849A, #4E5C7C, #7A849A); 
-      background-image:      -o-linear-gradient(left, #7A849A, #4E5C7C, #7A849A);
-      }
-      
-      .container {
-      max-width: 1000px;
-      }
-      @media (min-width: 767px){
-      .container {padding-left:10px;padding-right:10px;}
-      }
-      @media (min-width: 1010px){
-      .container {padding-left:0px;padding-right:0px;}
-      }
-     
-      .ul-fix {
-      padding-left: 20px;
-      }
-
-      .h3-fix {
-      margin-top: 10px;
-      text-align: center;
-      }
-
-      @media (max-width: 767px){
-      .footer-margin {margin-left:15px;margin-right:15px;}
-      }
-      
     </style>
 
     <!-- Fav and touch icons -->
@@ -233,8 +42,10 @@
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
 
-    </script>
-    <!-- Google Analytics END -->
+    </script><!-- Google Analytics END -->
+
+    <!-- Global Variabless helper -->
+    <script type="text/javascript" src="sys/assets/js/sessvars.js"></script>
 
   </head>
 
@@ -246,8 +57,7 @@
       <div class="hidden-sm">
 	<div class="header">
 	  <div class="container">
-	    <h4>Intelligent information solutions that can learn and evolve with 
-	      your business</h4>
+	    <h4>Intelligent information solutions that can learn and evolve with your business</h4>
 	  </div>
 	</div>
 	<div class="navbar-inner">
@@ -255,39 +65,39 @@
 	    <ul class="nav navbar-nav">
 	      <li class="active"><a href="index.html">Home</a></li>
 	      <li class="dropdown">
-		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
+		<a href="sys/en/services/" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
 		<ul class="dropdown-menu">
-		  <li><a href="backup.html">Online Backup</a></li>
-		  <li><a href="#">Email Management</a></li>
-		  <li><a href="#">Web Design & Dev</a></li>
+		  <li><a href="sys/en/services/backup/backup.html">Online Backup</a></li>
+		  <li><a href="sys/en/services/email/email-man.html">Email Management</a></li>
+		  <li><a href="sys/en/services/web/web-design.html">Web Design & Development</a></li>
 		  <li class="divider"></li>
 		  <li class="dropdown-header">Support Services</li>
-		  <li><a class="dropdown-item-adj" href="#">IT Support</a></li>
-		  <li><a class="dropdown-item-adj" href="#">Preventive Maintenance</a></li>
+		  <li><a class="dropdown-item-adj" href="sys/en/services/it-support/it-support.html">IT Support</a></li>
+		  <li><a class="dropdown-item-adj" href="sys/en/services/it-support/it-preventive.html">IT Preventive Maintenance</a></li>
 		</ul>
 	      </li>
               <li class="dropdown">
-		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
+		<a href="sys/en/products/" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
 		<ul class="dropdown-menu">
-		  <li><a href="#">PrioritiX</a></li>
-		  <li><a href="#">SysChecker</a></li>
+		  <li><a href="sys/en/products/prioritix/prioritix.html">PrioritiX</a></li>
+		  <li><a href="sys/en/products/syschecker/syschecker.html">SysChecker</a></li>
 		  <li class="divider"></li>
-		  <li class="dropdown-header">Social Projects</li>
-		  <li><a class="dropdown-item-adj" href="#">Wisebirk</a></li>
-		  <li><a class="dropdown-item-adj" href="#">Ummah Social Book</a></li>
+		  <li class="dropdown-header">Social Media Projects</li>
+		  <li><a class="dropdown-item-adj" href="http://www.wisebirk.com" target="_blank">Wisebirk</a></li>
+		  <li><a class="dropdown-item-adj" href="http://www.ummahsocialbook.com" target="_blank">Ummah Social Book</a></li>
 		</ul>
               </li>
-	      <li><a href="backup.html">Support</a></li>
+	      <li><a href="sys/en/support/support.html">Support</a></li>
 	      <li class="dropdown">
-		<a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+		<a href="sys/en/about/" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
 		<ul class="dropdown-menu">
-		  <li><a href="#">About us</a></li>
-		  <li><a href="#">Contact us</a></li>
+		  <li><a href="sys/en/about/about-us.html">About us</a></li>
 		</ul>
 	      </li>
+	      <li><a href="sys/en/contact/contact-us.html">Contact us</a></li>
 	    </ul>
 	    <ul class="nav navbar-nav pull-right">
-	      <li class="btn-warning"><a href="#store">Store</a></li>
+	      <li class="btn-warning"><a href="sys/en/store/store.html">Store</a></li>
 	    </ul>
 	  </div>
 	</div>
@@ -301,9 +111,9 @@
 	      <a class="navbar-brand" href="index.html">Sysformatics</a>
 	    </div>
 	    <div class="col-4 col-sm-4" style="text-align:center;">
-	      <button type="button" class="btn btn-warning btn-store-m-top">
-		<i class="icon-shopping-cart"></i>
-	      </button>
+	      <a href="sys/en/store/store.html"><button type="button" class="btn btn-warning btn-store-m-top">
+		  <i class="icon-shopping-cart"></i>
+	      </button></a>
 	    </div>
 	    <div class="col-4 col-sm-4">
 	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
@@ -316,37 +126,36 @@
 	      <hr class="style-one">
 	      <ul class="nav navbar-nav">
 		<li class="dropdown">
-		  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
+		  <a href="sys/en/services/" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
 		  <ul class="dropdown-menu">
-                    <li><a href="backup.html">Online Backup</a></li>
-                    <li><a href="#">Email Management</a></li>
-                    <li><a href="#">Web Design & Dev</a></li>
+                    <li><a href="sys/en/services/backup/backup.html">Online Backup</a></li>
+                    <li><a href="sys/en/services/email/email-man.html">Email Management</a></li>
+                    <li><a href="sys/en/services/web/web-design.html">Web Design & Development</a></li>
                     <li class="divider"></li>
                     <li class="dropdown-header" style="padding-left:15px;">Support Services</li>
-                    <li><a class="dropdown-item-adj" href="#">IT Support</a></li>
-                    <li><a class="dropdown-item-adj" href="#">Preventive Maintenance</a></li>		    
+                    <li><a class="dropdown-item-adj" href="sys/en/services/it-support.html">IT Support</a></li>
+                    <li><a class="dropdown-item-adj" href="sys/en/services/it-preventive.html">IT Preventive Maintenance</a></li>		    
 		  </ul>
 		</li>
 		<li class="dropdown">
-		  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
+		  <a href="sys/en/products/" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
 		  <ul class="dropdown-menu">
-                    <li><a href="#">PrioritiX</a></li>
-                    <li><a href="#">SysChecker</a></li>
+                    <li><a href="sys/en/products/prioritix/prioritix.html">PrioritiX</a></li>
+                    <li><a href="sys/en/products/syschecker/syschecker.html">SysChecker</a></li>
                     <li class="divider"></li>
-                    <li class="dropdown-header" style="padding-left:15px;">Social Projects</li>
-                    <li><a class="dropdown-item-adj" href="#">Wisebirk</a></li>
-                    <li><a class="dropdown-item-adj" href="#">Ummah Social Book</a></li>
+                    <li class="dropdown-header" style="padding-left:15px;">Social Media Projects</li>
+                    <li><a class="dropdown-item-adj" href="http://www.wisebirk.com" target="_blank">Wisebirk</a></li>
+                    <li><a class="dropdown-item-adj" href="http://www.ummahsocialbook.com" target="_blank">Ummah Social Book</a></li>
 		  </ul>
 		</li>
-		<li><a href="#Store">Support</a></li>
+		<li><a href="sys/en/support/support.html">Support</a></li>
 		<li class="dropdown">
-		  <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
-		  <ul class="dropdown-menu">
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Contact us</a></li>
-		  </ul>
+		<a href="sys/en/about/" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+		<ul class="dropdown-menu">
+		  <li><a href="sys/en/about/about-us.html">About us</a></li>
+		</ul>
 		</li>
-		<!--<li class="btn-store-m btn-warning"><a href="backup.html">Store</a></li>-->
+		<li><a href="sys/en/contact/contact-us.html">Contact us</a></li>
 	      </ul>
             </div><!--/.nav-collapse -->
 	  </div>
@@ -369,7 +178,7 @@
 	</div>
         <div class="carousel-inner">
           <div class="item active">
-	    <a href="sys/backup.html">
+	    <a href="sys/en/services/backup/backup.html">
             <img src="sys/assets/img/ID-201308081900.jpg" alt=""></a>
             <div class="carousel-caption">
               <h3>Online Data Backup</h3>
@@ -379,7 +188,8 @@
             </div>
           </div>
           <div class="item">
-            <img src="sys/assets/img/ID-201308081908.jpg" alt="">
+	    <a href="sys/en/services/email/email-man.html">
+            <img src="sys/assets/img/ID-201308081908.jpg" alt=""></a>
             <div class="carousel-caption">
               <h3>Email Management</h3>
 	      <div class="hidden-sm">
@@ -388,7 +198,8 @@
 	    </div>
           </div>
           <div class="item">
-            <img src="sys/assets/img/ID-201308082340.jpg" alt="">
+	    <a href="sys/en/services/web/web-design.html">
+            <img src="sys/assets/img/ID-201308082340.jpg" alt=""></a>
             <div class="carousel-caption">
               <h3>Web Design & Development</h3>
 	      <div class="hidden-sm">
@@ -397,7 +208,8 @@
 	    </div>
           </div>
 	  <div class="item">
-            <img src="sys/assets/img/ID-201308100121.jpg" alt="">
+	    <a href="sys/en/services/it-support/it-support.html">
+            <img src="sys/assets/img/ID-201308100121.jpg" alt=""></a>
             <div class="carousel-caption">
               <h3>IT Support Services</h3>
 	      <div class="hidden-sm">
@@ -418,7 +230,8 @@
       <div class="row">
         <div class="col-lg-3 col-sm-3">
           <div class="thumbnail thumbnail-fix">
-            <img src="sys/assets/img/ID-201308100821.jpg" class="img-responsive" alt=""> <!--"http://placehold.it/360x200" alt="">-->
+	    <a href="sys/en/services/backup/backup.html">
+            <img src="sys/assets/img/ID-201308100821.jpg" class="img-responsive" alt=""></a>
             <div class="caption">
 	      <h3 class="h3-fix">Online Data Backup</h3>
 	      <ul class="ul-fix">
@@ -427,29 +240,30 @@
 		<li>Increase data security and business continuity</li>
 	      </ul>
               <p></p>
-	      <p><a href="#" class="btn btn-primary btn-fix-bottom">View details &raquo;</a></p>
+	      <p><a href="sys/en/services/backup/backup.html" class="btn btn-primary btn-fix-bottom">View details &raquo;</a></p>
             </div>
           </div>
         </div>
 	<div class="col-lg-3 col-sm-3">
           <div class="thumbnail thumbnail-fix">
-            <img src="sys/assets/img/ID-201308100825.jpg" class="img-responsive" alt="">
+	    <a href="sys/en/services/email/email-man.html">
+            <img src="sys/assets/img/ID-201308100825.jpg" class="img-responsive" alt=""></a>
             <div class="caption">
 	      <h3 class="h3-fix">Email Management</h3>
 	      <ul class="ul-fix">
-		<li>Increase system service life</li>
-		<li>Improve system reliability and performance</li>
-		<li>Decrease system downtime</li>
-		<li>Save time and money</li>
+		<li>Increase email resilience</li>
+		<li>Immediately slash your IT costs</li>
+		<li>Use state of the art devices and software</li>
 	      </ul>
               <p></p>
-              <p><a href="#" class="btn btn-primary btn-fix-bottom">View details &raquo;</a></p>
+              <p><a href="sys/en/services/email/email-man.html" class="btn btn-primary btn-fix-bottom">View details &raquo;</a></p>
             </div>
           </div>
         </div>
         <div class="col-lg-3 col-sm-3">
           <div class="thumbnail thumbnail-fix">
-            <img src="sys/assets/img/ID-201308100827.jpg" class="img-responsive" alt="">
+	    <a href="sys/en/services/web/web-design.html">
+            <img src="sys/assets/img/ID-201308100827.jpg" class="img-responsive" alt=""></a>
             <div class="caption">
 	      <h3 class="h3-fix">Web Desing & Development</h3>
 	      <ul class="ul-fix">
@@ -460,13 +274,14 @@
 		<li>Web Applications</li>
 	      </ul>
               <p></p>
-	      <p><a href="#" class="btn btn-primary btn-fix-bottom">View details &raquo;</a></p>
+	      <p><a href="sys/en/services/web/web-design.html" class="btn btn-primary btn-fix-bottom">View details &raquo;</a></p>
             </div>
           </div>
         </div>
 	<div class="col-lg-3 col-sm-3">
           <div class="thumbnail thumbnail-fix">
-            <img src="sys/assets/img/ID-201308100851.jpg" class="img-responsive" alt="">
+	    <a href="sys/en/services/it-support/it-support.html">
+              <img src="sys/assets/img/ID-201308100851.jpg" class="img-responsive" alt=""></a>
             <div class="caption">
 	      <h3 class="h3-fix">IT Support Services</h3>
 	      <ul class="ul-fix">
@@ -476,16 +291,17 @@
 		<li>Save time and money</li>
 	      </ul>
               <p></p>
-              <p><a href="#" class="btn btn-primary btn-fix-bottom">View details &raquo;</a></p>
+              <p><a href="sys/en/services/it-support/it-support.html" class="btn btn-primary btn-fix-bottom">View details &raquo;</a></p>
             </div>
           </div>
         </div>
       </div>
-
+ 
       <footer class="footer-margin">
+	<p lang="es"><a href="sys/es/index.html">Español</a></p>
 	<hr>
-        <p><a href="#">Store</a> &middot; <a href="#">Support</a> &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a> &middot; <a href="#">About</a> &middot; <a href="#">Contact</a></p>
-<p>&copy; 2013 Sysformatics.</p>
+        <p><a href="sys/en/store/store.html">Store</a> &middot; <a href="sys/en/support/support.html">Support</a> &middot; <a href="sys/en/about/about-us.html">About us</a> &middot; <a href="sys/en/contact/contact-us.html">Contact us</a></p>
+	<p>&copy; 2013 Sysformatics.</p>
       </footer>
 
     </div> <!-- /container -->
@@ -500,10 +316,11 @@
       $(function(){
 
       // carousel
-      $('.carousel').carousel()
+      $('.carousel').carousel({interval:7000})
 
       })
       }(window.jQuery)
+
     </script>
     
     <!-- AddThis Smart Layers BEGIN -->
@@ -524,8 +341,7 @@
       ]
       }   
       });
-    </script>
-    <!-- AddThis Smart Layers END -->
+    </script><!-- AddThis Smart Layers END -->
 
     <!-- Google Analytics BEGIN -->
     <script type="text/javascript">
@@ -540,8 +356,26 @@
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
 
+    </script><!-- Google Analytics END -->
+
+    <!-- Language Redirect: Using accept-language -->
+    <script>
+      var language = '';
+
+      $.ajax({ 
+      url: "http://ajaxhttpheaders.appspot.com", 
+      dataType: 'jsonp', 
+      success: function(headers) {
+      // Get the language from the response:
+      language = headers['Accept-Language'];
+      if (sessvars.langset != true) { 
+      if (language.substr(0,2)=="es"){
+      document.location.href = "sys/es/index.html";
+      }
+      }
+      }
+      });
     </script>
-    <!-- Google Analytics END -->
 
   </body>
 </html>

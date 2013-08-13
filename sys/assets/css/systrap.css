@@ -1,0 +1,205 @@
+﻿/*!
+ * Systrap Customisation
+ *
+ * Copyright 2013 Sysformatics
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ */
+
+	body {
+        padding-top:156px;
+        padding-bottom: 10px;
+      }
+      @media (max-width:767px){
+      body {padding-top:51px;padding-bottom:45px;}    
+	}
+ 
+ /* HEADER & LOGOS
+      ------------------------------------------------- */
+      .header {
+      background-color: #ffffff;
+      }
+      .header .container {
+      background-image: url(../../assets/img/sysformatics.svg);
+      background-repeat: no-repeat;
+      background-size: 300px auto;
+      background-position: left center;
+      height: 100px;
+      }
+      .header h4 {
+      font-weight: normal;
+      text-align: right;
+      padding-top: 41px;
+      padding-right: 2px;
+      }
+      @media (max-width: 900px){
+      .header h4 {padding-top: 65px;}
+      }
+      
+      /* CUSTOMISE NAVIGATION BAR
+      ------------------------------------------------------ */
+      .navbar {
+      padding-left: 0;
+      padding-right: 0;
+      }
+      .navbar-inverse .navbar-brand {
+      color: #F0FFFF;
+      font-size: 20px;
+      float: left;
+      padding-left: 7px;
+      }
+      .navbar-toggle {
+      background-color: #4F5D7D;
+      padding: 6px;
+      width: 35px;
+      right: 7px;
+      }
+      .navbar-inverse .navbar-inner {
+      background-color: #B9BDC7;
+      background-image: linear-gradient(to bottom, #B9BDC7, #7A849A);
+      background-repeat: repeat-x;
+      border: 1px solid #0A2350;
+      }
+      .navbar .nav > li > a {
+      color:  #0A2350;
+      text-shadow: 0 1px 0 #7A849A;
+      border-radius: 0;
+      }
+      .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
+      background-color: #4F5D7D;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125) inset;
+      color: #ffffff;
+      text-decoration: none;
+      }
+      .navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner {
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+      }
+      .navbar-inner-nav{
+      background-color: #0AC2F5;
+      background-image: linear-gradient(to bottom, #0AC2F5, #0AC2F5);
+      background-repeat: repeat-x;
+      border-bottom: 1px solid #068AAF;
+      box-shadow: 0 1px 10px rgba(0, 0, 0, 0);
+      }
+      .navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner {
+      border-width: 1px 0;
+      }
+
+      /* CUSTOMISE DROPDOWN MENUS
+      -------------------------------------------------- */
+      .navbar .nav li.dropdown > .dropdown-toggle .caret {
+      border-bottom-color: #0A2350;
+      border-top-color: #0A2350;
+      }
+      .navbar .nav li.dropdown>a:hover .caret,.navbar .nav li.dropdown>a:focus .caret {
+      border-top-color:#ffffff;
+      border-bottom-color:#ffffff;
+      }
+      .navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle {
+      background-color: #4F5D7D;
+      color: #ffffff;
+      }
+      .dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-submenu:hover>a,.dropdown-submenu:focus>a {
+      text-decoration:none;
+      color:#ffffff;
+      background-color: #0AC2F5;
+      background-repeat: repeat-x;
+      background-image: linear-gradient(to bottom, #0AC2F5, #07BBF1);
+      }
+      .navbar-inner-nav .dropdown-menu>li>a:hover,.navbar-inner-nav .dropdown-menu>li>a:focus,.navbar-inner-nav .dropdown-submenu:hover>a,.navbar-inner-nav .dropdown-submenu:focus>a {
+      background-color: #4F5D7D;
+      background-image: linear-gradient(to bottom, #4F5D7D, #4F5D7D);
+      background-repeat: repeat-x;
+      color: #ffffff;
+      }
+      .dropdown .dropdown-menu .nav-header {
+      padding-left: 19px;
+      }
+      .dropdown .dropdown-menu .dropdown-item-adj {
+      padding-left: 26px;
+      }
+      .btn-store-m-top {
+      padding: 0px 0px 0px 0px;
+      font-size: 25px;
+      margin-top: 9px;
+      width:35px;
+      height:32px;
+      line-height: 1px;
+      }
+      .navbar .nav li.dropdown.open > .dropdown-toggle .caret, .navbar .nav li.dropdown.active > .dropdown-toggle .caret, .navbar .nav li.dropdown.open.active > .dropdown-toggle .caret {
+      border-bottom-color: #ffffff;
+      border-top-color: #ffffff;
+      }
+      .navbar-inverse .navbar-toggle:hover, navbar-inverse .navbar-toggle:focus {
+      background-color: #4F5D7D;
+      }
+      .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+      background-color: #4F5D7D;
+      background-image: linear-gradient(to bottom, #4F5D7D 0px, #4F5D7D 100%);
+      }
+         
+      /* CAROUSEL
+      --------------------------------------------------- */
+      .carousel-indicators {
+      bottom: 5px;
+      }
+      .carousel-caption {
+      padding-bottom: 15px;
+      }
+
+      /* MISC
+      -------------------------------------------------- */
+      .thumbnail-fix {
+      margin-top: 20px;
+      }
+      @media (min-width: 767px) {
+      .thumbnail-fix {min-height:440px;}
+      .btn-fix-bottom {position:absolute;bottom:20px;}
+      }
+      @media (min-width: 1010px) {
+      .thumbnail-fix {min-height:200px;}
+      .btn-fix-bottom {position:inherit;bottom:inherit;}
+      }
+
+      .col-padd-fix {
+      padding-left: 0;
+      padding-right: 0;
+      }
+
+      hr.style-one {
+      border: 0;
+      height: 1px;
+      margin: 50px 0 -7px 0;
+      background: #333;
+      background-image: -webkit-linear-gradient(left, #7A849A, #4E5C7C, #7A849A); 
+      background-image:    -moz-linear-gradient(left, #7A849A, #4E5C7C, #7A849A); 
+      background-image:     -ms-linear-gradient(left, #7A849A, #4E5C7C, #7A849A); 
+      background-image:      -o-linear-gradient(left, #7A849A, #4E5C7C, #7A849A);
+      }
+      
+      .container {
+      max-width: 1000px;
+      }
+      @media (min-width: 767px){
+      .container {padding-left:10px;padding-right:10px;}
+      }
+      @media (min-width: 1010px){
+      .container {padding-left:0px;padding-right:0px;}
+      }
+     
+      .ul-fix {
+      padding-left: 20px;
+      }
+
+      .h3-fix {
+      margin-top: 10px;
+      text-align: center;
+      }
+
+      .footer-margin {
+      margin-top: 20px;
+      }
+      @media (max-width: 767px){
+      .footer-margin {margin-left:15px;margin-right:15px;}
+      }
