@@ -1,0 +1,16 @@
+﻿/*!
+ * Contact Customisation
+ *
+ * Copyright 2013 Sysformatics
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ */
+
+
+      @media (min-width: 767px) {
+      .thumbnail-fix {min-height:790px;}
+      }
+      @media (min-width: 992px) {
+      .thumbnail-fix {min-height:606px;}
+      }

@@ -22,6 +22,15 @@
       .header .container {
       background-image: url(sys/assets/img/sysformatics.svg);
       }
+      
+      @media (min-width: 767px) {
+      .thumbnail-fix {min-height:440px;}
+      .btn-fix-bottom {position:absolute;bottom:20px;}
+      }
+      @media (min-width: 1010px) {
+      .thumbnail-fix {min-height:200px;}
+      .btn-fix-bottom {position:inherit;bottom:inherit;}
+      }
 
     </style>
 
@@ -94,7 +103,7 @@
 		  <li><a href="sys/en/about/about-us.html">About us</a></li>
 		</ul>
 	      </li>
-	      <li><a href="sys/en/contact/contact-us.html">Contact us</a></li>
+	      <li class="btn-info"><a href="sys/en/contact/fm-contact-us.cgi">Contact us</a></li>
 	    </ul>
 	    <ul class="nav navbar-nav pull-right">
 	      <li class="btn-warning"><a href="sys/en/store/store.html">Store</a></li>
@@ -155,7 +164,7 @@
 		  <li><a href="sys/en/about/about-us.html">About us</a></li>
 		</ul>
 		</li>
-		<li><a href="sys/en/contact/contact-us.html">Contact us</a></li>
+		<li><a href="sys/en/contact/fm-contact-us.cgi">Contact us</a></li>
 	      </ul>
             </div><!--/.nav-collapse -->
 	  </div>
@@ -296,11 +305,11 @@
           </div>
         </div>
       </div>
- 
+
       <footer class="footer-margin">
 	<p lang="es"><a href="sys/es/index.html">Español</a></p>
 	<hr>
-        <p><a href="sys/en/store/store.html">Store</a> &middot; <a href="sys/en/support/support.html">Support</a> &middot; <a href="sys/en/about/about-us.html">About us</a> &middot; <a href="sys/en/contact/contact-us.html">Contact us</a></p>
+        <p><a href="sys/en/store/store.html">Store</a> &middot; <a href="sys/en/support/support.html">Support</a> &middot; <a href="sys/en/about/about-us.html">About us</a> &middot; <a href="sys/en/contact/fm-contact-us.cgi">Contact us</a></p>
 	<p>&copy; 2013 Sysformatics.</p>
       </footer>
 
