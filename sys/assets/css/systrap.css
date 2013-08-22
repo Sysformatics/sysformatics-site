@@ -198,7 +198,9 @@
       
       .margin-fix {
       margin-top: 20px;
+      margin-bottom:0px;
       }
+            
       @media (max-width: 767px){
       .margin-fix {margin-left:15px;margin-right:15px;}
       }

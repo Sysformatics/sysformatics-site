@@ -78,7 +78,7 @@ $captcha_datadir = "/websites/123reg/LinuxPackage25/sy/sf/or/sysformatics.com/pu
 # Set this to a directory that will store the captcha images. This should    #
 # be accessible via the web because it will be included on the page.         #
 # Often something like /home/yourname/public_html/captcha_img
-$captcha_outputdir = "/websites/123reg/LinuxPackage22/sy/sf/or/sysformatics.com/public_html/sys/en/contact/img";
+$captcha_outputdir = "/websites/123reg/LinuxPackage22/sy/sf/or/sysformatics.com/public_html/sys/es/contacto/img";
 
 # NOTE: This is version 1.92x, a third-party modification that fixes more    #
 # security holes. Do NOT replace this with version 1.92.                     #
@@ -100,7 +100,7 @@ $captcha_outputdir = "/websites/123reg/LinuxPackage22/sy/sf/or/sysformatics.com/
 
 # Check the Captcha is correct
 if($captcha_enabled == 1) {
-    &check_captcha;
+  &check_captcha;
 }
 
 # Send E-Mail
@@ -113,20 +113,20 @@ if($captcha_enabled == 1) {
 # It checks that the captcha has been entered correctly,
 # returning an error if not.
 sub check_captcha {
-    require Authen::Captcha;
+  require Authen::Captcha;
 
-    my $captcha = Authen::Captcha->new(
-	data_folder => $captcha_datadir,
-	output_folder => $captcha_outputdir,
-	);
+  my $captcha = Authen::Captcha->new(
+    data_folder => $captcha_datadir,
+    output_folder => $captcha_outputdir,
+    );
 
-    my $submittedmd5sum = $Form{'captcha-md5sum'} || '';
-    my $submittedtext = $Form{'captcha-text'} || '';
+  my $submittedmd5sum = $Form{'captcha-md5sum'} || '';
+  my $submittedtext = $Form{'captcha-text'} || '';
 
-    if($captcha->check_code($submittedtext,$submittedmd5sum) != 1) {
-	print STDERR "The error is being called from check_captcha error handling...\n";
-	&error('bad_captcha');
-    }
+  if($captcha->check_code($submittedtext,$submittedmd5sum) != 1) {
+    print STDERR "The error is being called from check_captcha error handling...\n";
+    &error('bad_captcha');
+  }
 }
 
 
@@ -159,10 +159,10 @@ sub check_url {
     }
     else {
         if($stealth) {
-	    print "Status: 404 Not Found\n\n";
-	    exit;
+          print "Status: 404 Not Found\n\n";
+          exit;
         } else {
-	    $check_referer = 1;
+          $check_referer = 1;
         }
     }
 
@@ -192,8 +192,8 @@ sub get_date {
 sub parse_form {
 
     # Define the configuration associative array.                            #
-    %Config = ('recipient','',          'subject','',
-               'email','',              'realname','',
+    %Config = ('recipient','',          'asunto','',
+               'email','',              'nombre','',
                'redirect','',           'bgcolor','',
                'background','',         'link_color','',
                'vlink_color','',        'text_color','',
@@ -202,7 +202,7 @@ sub parse_form {
                'required','',           'env_report','',
                'return_link_title','',  'return_link_url','',
                'print_blank_fields','', 'missing_fields_redirect','',
-	       'lastname','');
+			   'apellido','');
 
     # Determine the form's REQUEST_METHOD (GET or POST) and split the form   #
     # fields up into their name-value pairs.  If the REQUEST_METHOD was      #
@@ -214,7 +214,7 @@ sub parse_form {
     elsif ($ENV{'REQUEST_METHOD'} eq 'POST') {
         # Get the input
         read(STDIN, $buffer, $ENV{'CONTENT_LENGTH'});
-	
+ 
         # Split the name-value pairs
         @pairs = split(/&/, $buffer);
     }
@@ -227,7 +227,7 @@ sub parse_form {
 
         # Split the pair up into individual variables.                       #
         local($name, $value) = split(/=/, $pair);
-	
+ 
         # Decode the form encoding on the name and value variables.          #
         # v1.92: remove null bytes                                           #
         $name =~ tr/+/ /;
@@ -292,8 +292,8 @@ sub check_required {
 
     # The following insures that there were no newlines in any fields which  #
     # will be used in the header.                                            #
-    if ($Config{'subject'} =~ /(\n|\r)/m || $Config{'email'} =~ /(\n|\r)/m ||
-        $Config{'realname'} =~ /(\n|\r)/m || $Config{'lastname'} =~ /(\n|\r)/m || $Config{'recipient'} =~ /(\n|\r)/m) {
+    if ($Config{'asunto'} =~ /(\n|\r)/m || $Config{'email'} =~ /(\n|\r)/m ||
+        $Config{'nombre'} =~ /(\n|\r)/m || $Config{'apellido'} =~ /(\n|\r)/m || $Config{'recipient'} =~ /(\n|\r)/m) {
         &error('invalid_headers');
     }
 
@@ -446,12 +446,12 @@ sub return_html {
         # Print the page footer.                                             #
         print <<"(END HTML FOOTER)";
         <hr size=1 width=75%><p> 
-	    <center><font size=-1><a href="http://www.scriptarchive.com/formmail.html">FormMail</a> V1.92 &copy; 1995 - 2002  Matt Wright<br>
-	    A Free Product of <a href="http://www.scriptarchive.com/">Matt's Script Archive, Inc.</a></font></center>
+        <center><font size=-1><a href="http://www.scriptarchive.com/formmail.html">FormMail</a> V1.92 &copy; 1995 - 2002  Matt Wright<br>
+A Free Product of <a href="http://www.scriptarchive.com/">Matt's Script Archive, Inc.</a></font></center>
         </body>
        </html>
 (END HTML FOOTER)
-}
+    }
 }
 
 sub send_mail {
@@ -462,14 +462,14 @@ sub send_mail {
     open(MAIL,"|$mailprog 1>&2");
 
     print MAIL "To: $Config{'recipient'}\n";
-    print MAIL "From: \"$Config{'realname'}\" \"$Config{'lastname'}\" <$Config{'email'}>\n";
+    print MAIL "From: \"$Config{'nombre'}\" \"$Config{'apellido'}\" <$Config{'email'}>\n";
 
     # Check for Message Subject
-    if ($Config{'subject'}) { print MAIL "Subject: $Config{'subject'}\n\n" }
-    else                    { print MAIL "Subject: Communication from visitor to website sysformatics.com\n\n" }
+    if ($Config{'asunto'}) { print MAIL "Asunto: $Config{'asunto'}\n\n" }
+    else                    { print MAIL "Asunto: Comunicación de visitante a la página web sysformatics.com\n\n" }
 
     print MAIL "Below is the result of your feedback form.  It was submitted by\n";
-    print MAIL "$Config{'realname'} $Config{'lastname'} ($Config{'email'}) on $date\n";
+    print MAIL "$Config{'nombre'} $Config{'apellido'} ($Config{'email'}) on $date\n";
     print MAIL "-" x 75 . "\n\n";
 
     if (@Print_Config) {
@@ -617,17 +617,17 @@ sub error {
     local($error,@error_fields) = @_;
     local($host,$missing_field,$missing_field_list);
 	
-    # Local variables for html layout
-    local($layout_1,$layout_cd,$layout_fs,$layout_fe,$layout_2);
-    
-    $layout_1 = '
-	<head>
-	<title>Sysformatics | Contact us</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	# Local variables for html layout
+	local($layout_1,$layout_2);
+	
+	$layout_1 = '
+    <head>
+    <meta charset="UTF-8">
+    <title>Sysformatics | Contáctenos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Sysformatics">
-    <meta name="description" content="Contact Sysformatics">
-    <meta name="keywords" content="sysformatics,contact sysformatics,business contact">
+    <meta name="description" content="">
+    <meta name="keywords" content=""/>
 
     <!-- STYLES -->
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
@@ -635,273 +635,271 @@ sub error {
     <link href="../../assets/css/social-buttons.css" rel="stylesheet">
     <link href="../../assets/css/bootstrap-glyphicons.css" rel="stylesheet">
     <link href="../../assets/css/systrap.css" rel="stylesheet">
-	
-	
-	<style type="text/css">  
-      @media (min-width: 767px) {
+    
+    <style type="text/css">
+
+    /* HEADER & LOGOS
+    ------------------------------------------------- */
+    .header .container {
+	background-image: url(../../assets/img/sysformatics.svg);
+	}
+	.header h4 {
+		padding-top:65px;
+	}
+	 @media (min-width: 767px) {
       .thumbnail-fix {min-height:560px;}
       }
       @media (min-width: 992px) {
       .thumbnail-fix {min-height:537px;}
       }
-
-    </style>
 	
-	<!-- Fav and touch icons -->
+</style>
+
+    <!-- Fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" href="../../assets/ico/apple-touch-icon.png">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
-	
-	<!-- Google Analytics BEGIN -->
-    <script type="text/javascript">';
-    
-    $layout_1 .= "
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-35786145-1']);
-      _gaq.push(['_trackPageview']);
 
-      (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    <!-- Google Analytics BEGIN -->
+    <script type="text/javascript">';
+	
+	$layout_1 .= "
+	
+    var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-35786145-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
 
     </script><!-- Google Analytics END -->
-	
-	</head>";
-    
-    $layout_1 .= '
-	<body>
-	<div class="navbar navbar-inverse navbar-fixed-top">
+
+</head>";
+
+$layout_1 .= '
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top">
 
       <!-- Visible Desktop -->
       <div class="hidden-sm">
-	<div class="header">
-	  <div class="container">
-	    <h4>Intelligent information solutions that can learn and evolve with your business</h4>
-	  </div>
-	</div>
-	<div class="navbar-inner">
-	  <div class="container">
-	    <ul class="nav navbar-nav">
-	      <li><a href="../../../index.html">Home</a></li>
-	      <li class="dropdown">
-		<a href="../services/" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
-		<ul class="dropdown-menu">
-		  <li><a href="../services/backup/backup.html">Online Backup</a></li>
-		  <li><a href="../services/email/email-man.html">Email Management</a></li>
-		  <li><a href="../services/web/web-design.html">Web Design & Development</a></li>
-		  <li class="divider"></li>
-		  <li class="dropdown-header">Support Services</li>
-		  <li><a class="dropdown-item-adj" href="../services/it-support/it-support.html">IT Support</a></li>
-		  <li><a class="dropdown-item-adj" href="../services/it-support/it-preventive.html">IT Preventive Maintenance</a></li>
-		</ul>
-	      </li>
-              <li class="dropdown">
-		<a href="../products/" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
-		<ul class="dropdown-menu">
-		  <li><a href="../products/prioritix/prioritix.html">PrioritiX</a></li>
-		  <li><a href="../products/syschecker/syschecker.html">SysChecker</a></li>
-		  <li class="divider"></li>
-		  <li class="dropdown-header">Social Media Projects</li>
-		  <li><a class="dropdown-item-adj" href="http://www.wisebirk.com" target="_blank">Wisebirk</a></li>
-		  <li><a class="dropdown-item-adj" href="http://www.ummahsocialbook.com" target="_blank">Ummah Social Book</a></li>
-		</ul>
-              </li>
-	      <li><a href="../support/support.html">Support</a></li>
-	      <li class="dropdown">
-		<a href="../about/" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
-		<ul class="dropdown-menu">
-		  <li><a href="../about/about-us.html">About us</a></li>
-		</ul>
-	      </li>
-	      <li class="active"><a href="../contact/fm-contact-us.cgi">Contact us</a></li>
-	    </ul>
-	    <ul class="nav navbar-nav pull-right">
-	      <li class="btn-warning"><a href="../store/store.html">Store</a></li>
-	    </ul>
-	  </div>
-	</div>
+      <div class="header">
+      <div class="container">
+      <h4>Soluciones informáticas inteligentes que pueden aprender y evolucionar con su empresa</h4>
+      </div>
+      </div>
+      <div class="navbar-inner">
+      <div class="container">
+      <ul class="nav navbar-nav">
+      <li><a href="../index.html">Inicio</a></li>
+      <li class="dropdown">
+      <a href="../servicios/" class="dropdown-toggle" data-toggle="dropdown">Servicios <b class="caret"></b></a>
+      <ul class="dropdown-menu">
+      <li><a href="../servicios/backup/copia-seguridad.html">Copia Seguridad en la Nube</a></li>
+      <li><a href="../servicios/email/administracion-email.html">Administración Correo Electrónico</a></li>
+      <li><a href="../servicios/web/desarrollo-web.html">Diseño & Desarrollo Web</a></li>
+      <li class="divider"></li>
+      <li class="dropdown-header">Servicios de Soporte</li>
+      <li><a class="dropdown-item-adj" href="../servicios/soporte-ti/soporte-ti.html">Soporte TI</a></li>
+      <li><a class="dropdown-item-adj" href="../servicios/soporte-ti/preventivo-ti.html">Mantenimiento Preventivo TI</a></li>
+      </ul>
+      </li>
+      <li class="dropdown">
+      <a href="../productos/" class="dropdown-toggle" data-toggle="dropdown">Productos <b class="caret"></b></a>
+      <ul class="dropdown-menu">
+      <li><a href="../productos/prioritix/prioritix.html">PrioritiX</a></li>
+      <li><a href="../productos/syschecker/syschecker.html">SysChecker</a></li>
+      <li class="divider"></li>
+      <li class="dropdown-header">Proyectos Redes Sociales</li>
+      <li><a class="dropdown-item-adj" href="http://www.wisebirk.com" target="_blank">Wisebirk</a></li>
+      <li><a class="dropdown-item-adj" href="http://www.ummahsocialbook.com" target="_blank">Ummah Social Book</a></li>
+      </ul>
+      </li>
+      <li><a href="../soporte/soporte.html">Soporte</a></li>
+      <li class="dropdown">
+      <a href="../acerca-de/" class="dropdown-toggle" data-toggle="dropdown">Acerca de <b class="caret"></b></a>
+      <ul class="dropdown-menu">
+      <li><a href="../acerca-de/quienes-somos.html">Quiénes Somos</a></li>
+      </ul>
+      </li>
+      <li class="active"><a href="../contacto/fm-contact-us.cgi">Contáctenos</a></li>
+      </ul>
+      <ul class="nav navbar-nav pull-right">
+      <li class="btn-warning"><a href="../tienda/tienda.html">Tienda</a></li>
+      </ul>
+      </div>
+      </div>
       </div><!-- End Visible Desktop -->
 
       <!-- Hidden Desktop -->
       <div class="visible-sm">
-	<div class="navbar-inner-nav">
-	  <div class="container">
-	    <div class="col-4 col-sm-4 col-padd-fix">
-	      <a class="navbar-brand" href="../../../index.html">Sysformatics</a>
-	    </div>
-	    <div class="col-4 col-sm-4" style="text-align:center;">
-	      <a href="../store/store.html"><button type="button" class="btn btn-warning btn-store-m-top">
-		  <i class="icon-shopping-cart"></i>
-	      </button></a>
-	    </div>
-	    <div class="col-4 col-sm-4">
-	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-	      </button>
-	    </div>
-	    <div class="nav-collapse collapse">
-	      <hr class="style-one">
-	      <ul class="nav navbar-nav">
-		<li class="dropdown">
-		  <a href="../services/" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
-		  <ul class="dropdown-menu">
-                    <li><a href="../services/backup/backup.html">Online Backup</a></li>
-                    <li><a href="../services/email/email-man.html">Email Management</a></li>
-                    <li><a href="../services/web/web-design.html">Web Design & Development</a></li>
-                    <li class="divider"></li>
-                    <li class="dropdown-header" style="padding-left:15px;">Support Services</li>
-                    <li><a class="dropdown-item-adj" href="../services/it-support/it-support.html">IT Support</a></li>
-                    <li><a class="dropdown-item-adj" href="../services/it-support/it-preventive.html">IT Preventive Maintenance</a></li>		    
-		  </ul>
-		</li>
-		<li class="dropdown">
-		  <a href="../products/" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
-		  <ul class="dropdown-menu">
-                    <li><a href="../products/prioritix/prioritix.html">PrioritiX</a></li>
-                    <li><a href="../products/syschecker/syschecker.html">SysChecker</a></li>
-                    <li class="divider"></li>
-                    <li class="dropdown header" style="padding-left:15px;">Social Media Projects</li>
-                    <li><a class="dropdown-item-adj" href="http://www.wisebirk.com" target="_blank">Wisebirk</a></li>
-                    <li><a class="dropdown-item-adj" href="html://www.ummahsocialbook.com" target="_blank">Ummah Social Book</a></li>
-		  </ul>
-		</li>
-		<li><a href="../support/support.html">Support</a></li>
-		<li class="dropdown">
-		  <a href="../about/" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
-		  <ul class="dropdown-menu">
-		    <li><a href="../about/about-us.html">About us</a></li>
-		  </ul>
-		</li>
-		<li class="active"><a href="../contact/fm-contact-us.cgi">Contact us</a></li>
-	      </ul>
-            </div><!--/.nav-collapse -->
-	  </div>
-	</div>
+      <div class="navbar-inner-nav">
+      <div class="container">
+      <div class="col-4 col-sm-4 col-padd-fix">
+      <a class="navbar-brand" href="../index.html">Sysformatics</a>
+      </div>
+      <div class="col-4 col-sm-4" style="text-align:center;">
+      <a href="../tienda/tienda.html"><button type="button" class="btn btn-warning btn-store-m-top">
+      <i class="icon-shopping-cart"></i>
+      </button></a>
+      </div>
+      <div class="col-4 col-sm-4">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+      </div>
+      <div class="nav-collapse collapse">
+      <hr class="style-one">
+      <ul class="nav navbar-nav">
+      <li class="dropdown">
+      <a href="../servicios/" class="dropdown-toggle" data-toggle="dropdown">Servicios <b class="caret"></b></a>
+      <ul class="dropdown-menu">
+      <li><a href="../servicios/backup/copia-seguridad.html">Copia Seguridad en la Nube</a></li>
+      <li><a href="../servicios/email/administracion-email.html">Administración Correo Electrónico</a></li>
+      <li><a href="../servicios/web/desarrollo-web.html">Diseño & Desarrollo Web</a></li>
+      <li class="divider"></li>
+      <li class="dropdown-header" style="padding-left:15px;">Servicios de Soporte</li>
+      <li><a class="dropdown-item-adj" href="../servicios/soporte-ti/soporte-ti.html">Soporte TI</a></li>
+      <li><a class="dropdown-item-adj" href="../servicios/soporte-ti/preventivo-ti.html">Mantenimiento Preventivo TI</a></li>		    
+      </ul>
+      </li>
+      <li class="dropdown">
+      <a href="../productos/" class="dropdown-toggle" data-toggle="dropdown">Productos <b class="caret"></b></a>
+      <ul class="dropdown-menu">
+      <li><a href="../productos/prioritix/prioritix.html">PrioritiX</a></li>
+      <li><a href="../productos/syschecker/syschecker.html">SysChecker</a></li>
+      <li class="divider"></li>
+      <li class="dropdown-header" style="padding-left:15px;">Proyectos Redes Sociales</li>
+      <li><a class="dropdown-item-adj" href="http://www.wisebirk.com" target="_blank">Wisebirk</a></li>
+      <li><a class="dropdown-item-adj" href="http://www.ummahsocialbook.com" target="_blank">Ummah Social Book</a></li>
+      </ul>
+      </li>
+      <li><a href="../soporte/soporte.html">Soporte</a></li>
+      <li class="dropdown">
+      <a href="../acerca-de/" class="dropdown-toggle" data-toggle="dropdown">Acerca de <b class="caret"></b></a>
+      <ul class="dropdown-menu">
+      <li><a href="../acerca-de/quienes-somos.html">Quiénes Somos</a></li>
+      </ul>
+      </li>
+      <li class="active"><a href="../contacto/fm-contact-us.cgi">Contáctenos</a></li>
+      </ul>
+      </div><!--/.nav-collapse -->
+      </div>
+      </div>
       </div><!-- End Hidden Desktop -->
-      
-    </div><!-- End Header & Menu bar -->
+      </div><!-- End Header & Menu bar -->
+
+      <div class="container">
+      <div class="row">
+      <div class="col-lg-4 col-sm-4">
+      <div class="thumbnail thumbnail-fix">
+      <div class="caption">
+      <h3 class="h3-fix">Consultas</h3>
+      <address>
+      <dotted-underline>Email:</dotted-underline> <a href="mailto:info\@sysformatics.com">info&#64;sysformatics.com</a><br>
+      <dotted-underline>Skype:</dotted-underline> <a href="skype:info.sysformatics?call">info.sysformatics</a>
+      </address>
+      <h3 class="h3-fix">Soporte</h3>
+      <address>
+      <dotted-underline>Email:</dotted-underline>  <a href="mailto:support&#64;sysformatics.com">support&#64;sysformatics.com</a><br>
+      <dotted-underline>Skype:</dotted-underline> <a href="skype:support.sysformatics?call">support.sysformatics</a>
+      </address><br>
+      <h3 class="h3-fix">Directorio de Oficinas</h3>
+      <address>
+      <strong>AMERICAS</strong><br>
+      Calle 8A 11E-31<br>
+      Cúcuta, Norte de Santander<br>
+      Colombia<br>
+      <dotted-underline>Tel:</dotted-underline> +57 (9) 7595 0046<br/>
+      </address>
+      <address>
+      <strong>EMEA</strong><br>
+      45 Pearl Road<br>
+      London, E17 4QY<br>
+      United Kingdom<br>
+      <dotted-underline>Tel:</dotted-underline> +44 (0) 79466 07895<br/>
+      </address>
+      </div>
+      </div>
+      </div>
+      <div class="col-lg-8 col-sm-8">
+      <div class="thumbnail thumbnail-fix">
+      <div class="caption">
+      <h3 class="h3-fix">Comentarios</h3>';
 	
-	<div class="container">
-	  <h2 class="margin-fix">Contact Sysformatics</h2>
-	<div class="row">';
-
-    $layout_cd = '
-		<div class="col-lg-4 col-sm-4">
-			<div class="thumbnail thumbnail-fix">
-				<div class="caption">
-					<h3 class="h3-fix">Enquiries</h3>
-					<address>
-						<dotted-underline>Email:</dotted-underline> <a href="mailto:info&#64;sysformatics.com">info&#64;sysformatics.com</a><br>
-						<dotted-underline>Skype:</dotted-underline> <a href="skype:info.sysformatics?call">info.sysformatics</a>
-					</address>
-					<h3 class="h3-fix">Support</h3>
-					<address>
-						<dotted-underline>Email:</dotted-underline>  <a href="mailto:support&#64;sysformatics.com">support&#64;sysformatics.com</a><br>
-						<dotted-underline>Skype:</dotted-underline> <a href="skype:support.sysformatics?call">support.sysformatics</a>
-					</address><br>
-					<h3 class="h3-fix">Office Directory</h3>
-					<address>
-						<strong>EMEA</strong><br>
-						11 Thessaly Road<br>
-						London, SW8 4XN<br>
-						United Kingdom<br>
-						<dotted-underline>Tel:</dotted-underline> +44 (0) 79466 07895<br/>
-					</address>
-					<address>
-						<strong>AMERICAS</strong><br>
-						Calle 8A 11E-31<br>
-						Cúcuta, Norte de Santander<br>
-						Colombia<br>
-						<dotted-underline>Tel:</dotted-underline> +57 (9) 7595 0046<br/>
-					</address>
-				</div>
-			</div>
-		</div>';
-
-    $layout_fs = '
-		<div class="col-lg-8 col-sm-8">
-			<div class="thumbnail thumbnail-fix">
-				<div class="caption">
-<h3 class="h3-fix">Feedback</h3>';
-
-    $layout_fe = '
-</div>
-			</div>
-		</div>';
-
-    $layout_2 = '	
-</div>
-<footer class="footer-margin">
-	<p lang="es"><a href="../../es/contacto/fm-contact-us.cgi">Español</a></p>
-	<hr>
-        <p><a href="../store/store.html">Store</a> &middot; <a href="../support/support.html">Support</a> &middot; <a href="../about/about-us.html">About us</a> &middot; <a href="../contact/fm-contact-us.cgi">Contact us</a></p>
-	<p>&copy; 2013 Sysformatics.</p>
+	$layout_2 = '
+	  </div>
+      </div>
+      </div>
+      </div>
+      
+      <footer class="footer-margin">
+      <p lang="en"><a href="../../en/contact/fm-contact-us.cgi">English</a></p>
+      <hr>
+      <p><a href="../tienda/tienda.html">Tienda</a> &middot; <a href="../soporte/soporte.html">Soporte</a> &middot; <a href="../acerca-de/quienes-somos.html">Quiénes Somos</a> &middot; <a href="../contacto/fm-contact-us.cgi">Contáctenos</a></p>
+      <p>&copy; 2013 Sysformatics.</p>
       </footer>
-	  
-	</div><!-- /container -->
 
-	<!-- Javascript
-	 ================================================== -->
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="../../assets/js/bootstrap.min.js"></script>
+      </div> <!-- /container -->
 
-	<!-- AddThis Smart Layers BEGIN -->
-    <!-- Go to http://www.addthis.com/get/smart-layers to customize -->
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-520259f274c70552"></script>
-    <script type="text/javascript">';
-
-    $layout_2 .= "
-addthis.layers({
-      'theme' : 'gray',
-      'share' : {
-      'position' : 'right',
-      'numPreferredServices' : 4
-      }, 
-      'follow' : {
-      'services' : [
-      {'service': 'facebook', 'id': 'pages/Sysformatics/482146858508732'},
-      {'service': 'twitter', 'id': 'Sysformatics'},
-      {'service': 'linkedin', 'id': 'sysformatics', 'usertype': 'company'}
-      ]
-      }   
-      });
+      <!-- Javascript
+      ================================================== -->
+      <script src="http://code.jquery.com/jquery.js"></script>
+      <script src="../../assets/js/bootstrap.min.js"></script>
+      
+      <!-- AddThis Smart Layers BEGIN -->
+      <!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-520259f274c70552"></script>
+      <script type="text/javascript">';
+	
+	$layout_2 .= "
+	addthis.layers({
+	  'theme' : 'gray',
+	  'share' : {
+	      'position' : 'right',
+	      'numPreferredServices' : 4
+	  }, 
+		  'follow' : {
+		      'services' : [
+			  {'service': 'facebook', 'id': 'pages/Sysformatics/482146858508732'},
+			  {'service': 'twitter', 'id': 'Sysformatics'},
+			  {'service': 'linkedin', 'id': 'sysformatics', 'usertype': 'company'}
+			  ]
+	      }   
+		     });
     </script><!-- AddThis Smart Layers END -->";
-    
-    $layout_2 .= '
-	 <!-- Google Analytics BEGIN -->
-    <script type="text/javascript">';
+	
+	$layout_2 .= '
+	<!-- Google Analytics BEGIN -->
+	<script type="text/javascript">';
+	
+	$layoot_2 .= "
+	var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-35786145-1']);
+    _gaq.push(['_trackPageview']);
 
-    
-    $layout_2 .= "
-var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-35786145-1']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    (function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
 
-    </script><!-- Google Analytics END -->";	
-    
-    
+    </script><!-- Google Analytics END -->";
+	
+	
     if ($error eq 'bad_referer') {
         if ($ENV{'HTTP_REFERER'} =~ m|^https?://([\w\.]+)|i) {
             $host = $1;
             my $referer = &clean_html($ENV{'HTTP_REFERER'});
             print <<"(END ERROR HTML)";
 Content-type: text/html
-<!DOCTYPE html>
+
 <html lang="en">
 $layout_1
-	<div class="hidden-sm">
-	$layout_cd
-	</div>
-	$layout_fs
 	<h3 class="h3-fix">Bad Referrer - Access Denied</h3>
    </table>
    <table border=0 width=600 bgcolor=#CFCFCF>
@@ -916,40 +914,35 @@ $layout_1
 
      Add <tt>'$host'</tt> to your <tt><b>\@referers</b></tt> array.<hr size=1><br>
      <input Type="button" class="btn btn-info" VALUE="&larr; Go back" onClick="history.go(-1);return true;">
-	$layout_fe
-	<div class="visible-sm">
-	$layout_cd
-	</div>
 	$layout_2
  </body>
 </html>
 (END ERROR HTML)
         }
         else {
-            
-			print "Location: fm-contact-us.cgi\n\n";
+            print <<"(END ERROR HTML)";
+Content-type: text/html
+
+<html lang="en">
+	$layout_1
+   $layout_2
+ </body>
+</html>
+(END ERROR HTML)
         }
     }
 
     elsif ($error eq 'request_method') {
             print <<"(END ERROR HTML)";
 Content-type: text/html
-<!DOCTYPE html>
+
 <html lang="en">
-	$layout_1
-	<div class="hidden-sm">
-	$layout_cd
-	</div>
-	$layout_fs
+$layout_1
 	<h3 class="h3-fix">Error: Request Method</h3>
     <h4 class="text-info">The Request Method of the Form you submitted did not match
      either <tt>GET</tt> or <tt>POST</tt>.  Please check the form and make sure the
      <tt>method=</tt> statement is in upper case and matches <tt>GET</tt> or <tt>POST</tt>.</h4><br>
      <input Type="button" class="btn btn-info" VALUE="&larr; Go back" onClick="history.go(-1);return true;">
-     $layout_fe
-	<div class="visible-sm">
-	$layout_cd
-	</div>
 	$layout_2
  </body>
 </html>
@@ -960,20 +953,11 @@ Content-type: text/html
       print <<"(END ERROR HTML)";
 Content-type: text/html
 
-    <!DOCTYPE html>
 <html lang="en">
 	$layout_1
-	<div class="hidden-sm">
-	$layout_cd
-	</div>
-	$layout_fs
-	<h3 class="text-danger">Bad image verification code</h3>
-	<h4 class="text-info">The entered image verification code was incorrect, please try again.</h4><br>
+	<h3 class="text-danger">Incorrecto código de imagen de verificación </h3>
+	<h4 class="text-info">El código de verificación de la imagen introducida es incorrecto, por favor, inténtelo de nuevo.</h4><br>
 	<input Type="button" class="btn btn-info" VALUE="&larr; Go back" onClick="history.go(-1);return true;">
-    $layout_fe
-	<div class="visible-sm">
-	$layout_cd
-	</div>
 	$layout_2
  </body>
 </html>
@@ -983,22 +967,14 @@ Content-type: text/html
     elsif ($error eq 'no_recipient') {
             print <<"(END ERROR HTML)";
 Content-type: text/html
-<!DOCTYPE html>
+
 <html lang="en">
-    $layout_1
-	<div class="hidden-sm">
-	$layout_cd
-	</div>
-	$layout_fs
+	$layout_1
     <h3 class="text-danger">Error: Bad/No Recipient</h3>
     <h4 class="text-info">There was no recipient or an invalid recipient specified in the data sent to FormMail.  Please
      make sure you have filled in the <tt>recipient</tt> form field with an e-mail
      address that has been configured in <tt>\@recipients</tt>.</h4><br>
 	<input Type="button" class="btn btn-info" VALUE="&larr; Go back" onClick="history.go(-1);return true;">
-    $layout_fe
-	<div class="visible-sm">
-	$layout_cd
-	</div>
 	$layout_2
  </body>
 </html>
@@ -1009,22 +985,12 @@ Content-type: text/html
             print <<"(END ERROR HTML)";
 Content-type: text/html
 
-     <!DOCTYPE html>
 <html lang="en">
 	$layout_1
-	<div class="hidden-sm">
-	$layout_cd
-	</div>
-	$layout_fs
-	<h3 class="text-danger">Bad Header Fields</h3>
-    <h4 class="text-info">The header fields, which include <tt>recipient</tt>, <tt>email</tt>, <tt>realname</tt>, <tt>lastname</tt>, <tt>telephone</tt> and <tt>subject</tt> were
-     filled in with invalid values. You may not include any newline characters in these parameters.<br>
-	Please return to the feedback form and try again.</h4><br>
+	<h3 class="text-danger">Inadecuada Cabecera de Campos</h3>
+    <h4 class="text-info">Las cabeceras de los campos, que incluyen <tt> receptor </ tt>, <tt> email </ tt>, <tt> nombre</ tt>, <tt> apellido </ tt>, <tt> teléfono </ tt> y <tt> asunto</ tt> han sido completados con valores no válidos. Usted no puede incluir cualquier carácter de nueva línea en estos parámetros. <br>
+	Por favor regrese al formulario de comentarios y vuelva a intentarlo.</h4><br>
 	<input Type="button" class="btn btn-info" VALUE="&larr; Go back" onClick="history.go(-1);return true;">
-    $layout_fe
-	<div class="visible-sm">
-	$layout_cd
-	</div>
 	$layout_2
  </body>
 </html>
@@ -1043,23 +1009,14 @@ Content-type: text/html
             print <<"(END ERROR HTML)";
 Content-type: text/html
 
-<!DOCTYPE html>
-<html lang="en">
+ <html lang="en">
 	$layout_1
-	<div class="hidden-sm">
-	$layout_cd
-	</div>
-	$layout_fs
-	<h3 class="text-danger">Error: Blank Fields</h3>
-	<h4 class="text-info">The following fields were left blank in your submission form:</h4>
+	<h3 class="text-danger">Error: Campos en blanco</h3>
+	<h4 class="text-info">Los siguientes campos se han dejado en blanco en el formulario de envío:</h4>
 	<h4 class="text-info"><ul>$missing_field_list</ul>
-	<h4 class="text-info">These fields must be filled in before you can successfully submit the form.<br>
-	 Please return to the feedback form and try again.</h4><br>
+	<h4 class="text-info">Estos campos deben ser llenados antes de poder enviar correctamente el formulario.<br>
+	 Por favor regrese al formulario de comentarios y vuelva a intentarlo.</h4><br>
 	<input Type="button" class="btn btn-info" VALUE="&larr; Go back" onClick="history.go(-1);return true;">
-	$layout_fe
-	<div class="visible-sm">
-	$layout_cd
-	</div>
 	$layout_2	
  </body>
 </html>

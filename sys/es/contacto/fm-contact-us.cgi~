@@ -11,17 +11,17 @@ my $captcha_datadir = "/websites/123reg/LinuxPackage25/sy/sf/or/sysformatics.com
 
 # this directory will store the captcha images. This should
 # be accessible via the web because it will be included on the page.
-my $captcha_outputdir = "/websites/123reg/LinuxPackage22/sy/sf/or/sysformatics.com/public_html/sys/en/contact/img";
+my $captcha_outputdir = "/websites/123reg/LinuxPackage22/sy/sf/or/sysformatics.com/public_html/sys/es/contacto/img";
 
 # This directory is the same as above, but using the web accessible
 # URL path.
-my $image_dir = "/sys/en/contact/img";
+my $image_dir = "/sys/es/contacto/img";
 
 # This should be the location of the FormMail.cgi script.
-my $formmail = "/sys/en/contact/FormMail.cgi";
+my $formmail = "/sys/es/contacto/FormMail.cgi";
 
 # This is where the user should be taken to after submitting the form.
-my $redirect = "http://sysformatics.com/sys/en/contact/email_sent.html";
+my $redirect = "http://sysformatics.com/sys/es/contacto/email_sent.html";
 
 
 my $captcha = Authen::Captcha->new(
@@ -58,14 +58,14 @@ print $cgi->header () ;
 print << "END_OF_HTML";
 
 <!DOCTYPE html>
-    <html lang="en">
+    <html lang="es">
     <head>
-    <title>Sysformatics | Contact us</title>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <title>Sysformatics | Contáctenos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Sysformatics">
-    <meta name="description" content="Contact Sysformatics">
-    <meta name="keywords" content="sysformatics,contact sysformatics,business contact">
+    <meta name="description" content="">
+    <meta name="keywords" content=""/>
 
     <!-- STYLES -->
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
@@ -73,14 +73,31 @@ print << "END_OF_HTML";
     <link href="../../assets/css/social-buttons.css" rel="stylesheet">
     <link href="../../assets/css/bootstrap-glyphicons.css" rel="stylesheet">
     <link href="../../assets/css/systrap.css" rel="stylesheet">
-    <link href="../../assets/css/contact.css" rel="stylesheet">
-    
+
+    <style type="text/css">
+
+    /* HEADER & LOGOS
+    ------------------------------------------------- */
+    .header .container {
+	background-image: url(../../assets/img/sysformatics.svg);
+}
+.header h4 {
+    padding-top:65px;
+}
+
+\@media (min-width: 767px) {
+    .thumbnail-fix {min-height:790px;}
+}
+\@media (min-width: 992px) {
+    .thumbnail-fix {min-height:606px;}
+}
+
+</style>
+
     <!-- Fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" href="../../assets/ico/apple-touch-icon.png">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
-    
-    </script>
-    
+
     <!-- Google Analytics BEGIN -->
     <script type="text/javascript">
 
@@ -95,57 +112,58 @@ _gaq.push(['_trackPageview']);
       })();
 
     </script><!-- Google Analytics END -->
-	
+
 </head>
+
 <body>
 
- <div class="navbar navbar-inverse navbar-fixed-top">
+<div class="navbar navbar-inverse navbar-fixed-top">
 
       <!-- Visible Desktop -->
       <div class="hidden-sm">
       <div class="header">
       <div class="container">
-      <h4>Intelligent information solutions that can learn and evolve with your business</h4>
+      <h4>Soluciones informáticas inteligentes que pueden aprender y evolucionar con su empresa</h4>
       </div>
       </div>
       <div class="navbar-inner">
       <div class="container">
       <ul class="nav navbar-nav">
-      <li><a href="../../../index.html">Home</a></li>
+      <li><a href="../index.html">Inicio</a></li>
       <li class="dropdown">
-      <a href="../services/" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
+      <a href="../servicios/" class="dropdown-toggle" data-toggle="dropdown">Servicios <b class="caret"></b></a>
       <ul class="dropdown-menu">
-      <li><a href="../services/backup/backup.html">Online Backup</a></li>
-      <li><a href="../services/email/email-man.html">Email Management</a></li>
-      <li><a href="../services/web/web-design.html">Web Design & Development</a></li>
+      <li><a href="../servicios/backup/copia-seguridad.html">Copia Seguridad en la Nube</a></li>
+      <li><a href="../servicios/email/administracion-email.html">Administración Correo Electrónico</a></li>
+      <li><a href="../servicios/web/desarrollo-web.html">Diseño & Desarrollo Web</a></li>
       <li class="divider"></li>
-      <li class="dropdown-header">Support Services</li>
-      <li><a class="dropdown-item-adj" href="../services/it-support/it-support.html">IT Support</a></li>
-      <li><a class="dropdown-item-adj" href="../services/it-support/it-preventive.html">IT Preventive Maintenance</a></li>
+      <li class="dropdown-header">Servicios de Soporte</li>
+      <li><a class="dropdown-item-adj" href="../servicios/soporte-ti/soporte-ti.html">Soporte TI</a></li>
+      <li><a class="dropdown-item-adj" href="../servicios/soporte-ti/preventivo-ti.html">Mantenimiento Preventivo TI</a></li>
       </ul>
       </li>
       <li class="dropdown">
-      <a href="../products/" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
+      <a href="../productos/" class="dropdown-toggle" data-toggle="dropdown">Productos <b class="caret"></b></a>
       <ul class="dropdown-menu">
-      <li><a href="../products/prioritix/prioritix.html">PrioritiX</a></li>
-      <li><a href="../products/syschecker/syschecker.html">SysChecker</a></li>
+      <li><a href="../productos/prioritix/prioritix.html">PrioritiX</a></li>
+      <li><a href="../productos/syschecker/syschecker.html">SysChecker</a></li>
       <li class="divider"></li>
-      <li class="dropdown-header">Social Media Projects</li>
+      <li class="dropdown-header">Proyectos Redes Sociales</li>
       <li><a class="dropdown-item-adj" href="http://www.wisebirk.com" target="_blank">Wisebirk</a></li>
       <li><a class="dropdown-item-adj" href="http://www.ummahsocialbook.com" target="_blank">Ummah Social Book</a></li>
       </ul>
       </li>
-      <li><a href="../support/support.html">Support</a></li>
+      <li><a href="../soporte/soporte.html">Soporte</a></li>
       <li class="dropdown">
-      <a href="../about/" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+      <a href="../acerca-de/" class="dropdown-toggle" data-toggle="dropdown">Acerca de <b class="caret"></b></a>
       <ul class="dropdown-menu">
-      <li><a href="../about/about-us.html">About us</a></li>
+      <li><a href="../acerca-de/quienes-somos.html">Quiénes Somos</a></li>
       </ul>
       </li>
-      <li class="active"><a href="../contact/fm-contact-us.cgi">Contact us</a></li>
+      <li class="active"><a href="../contacto/fm-contact-us.cgi">Contáctenos</a></li>
       </ul>
       <ul class="nav navbar-nav pull-right">
-      <li class="btn-warning"><a href="../store/store.html">Store</a></li>
+      <li class="btn-warning"><a href="../tienda/tienda.html">Tienda</a></li>
       </ul>
       </div>
       </div>
@@ -156,10 +174,10 @@ _gaq.push(['_trackPageview']);
       <div class="navbar-inner-nav">
       <div class="container">
       <div class="col-4 col-sm-4 col-padd-fix">
-      <a class="navbar-brand" href="../../../index.html">Sysformatics</a>
+      <a class="navbar-brand" href="../index.html">Sysformatics</a>
       </div>
       <div class="col-4 col-sm-4" style="text-align:center;">
-      <a href="../store/store.html"><button type="button" class="btn btn-warning btn-store-m-top">
+      <a href="../tienda/tienda.html"><button type="button" class="btn btn-warning btn-store-m-top">
       <i class="icon-shopping-cart"></i>
       </button></a>
       </div>
@@ -174,71 +192,61 @@ _gaq.push(['_trackPageview']);
       <hr class="style-one">
       <ul class="nav navbar-nav">
       <li class="dropdown">
-      <a href="../services/" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
+      <a href="../servicios/" class="dropdown-toggle" data-toggle="dropdown">Servicios <b class="caret"></b></a>
       <ul class="dropdown-menu">
-      <li><a href="../services/backup/backup.html">Online Backup</a></li>
-      <li><a href="../services/email/email-man.html">Email Management</a></li>
-      <li><a href="../services/web/web-design.html">Web Design & Development</a></li>
+      <li><a href="../servicios/backup/copia-seguridad.html">Copia Seguridad en la Nube</a></li>
+      <li><a href="../servicios/email/administracion-email.html">Administración Correo Electrónico</a></li>
+      <li><a href="../servicios/web/desarrollo-web.html">Diseño & Desarrollo Web</a></li>
       <li class="divider"></li>
-      <li class="dropdown-header" style="padding-left:15px;">Support Services</li>
-      <li><a class="dropdown-item-adj" href="../services/it-support/it-support.html">IT Support</a></li>
-      <li><a class="dropdown-item-adj" href="../services/it-support/it-preventive.html">IT Preventive Maintenance</a></li>		    
+      <li class="dropdown-header" style="padding-left:15px;">Servicios de Soporte</li>
+      <li><a class="dropdown-item-adj" href="../servicios/soporte-ti/soporte-ti.html">Soporte TI</a></li>
+      <li><a class="dropdown-item-adj" href="../servicios/soporte-ti/preventivo-ti.html">Mantenimiento Preventivo TI</a></li>		    
       </ul>
       </li>
       <li class="dropdown">
-      <a href="../products/" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
+      <a href="../productos/" class="dropdown-toggle" data-toggle="dropdown">Productos <b class="caret"></b></a>
       <ul class="dropdown-menu">
-      <li><a href="../products/prioritix/prioritix.html">PrioritiX</a></li>
-      <li><a href="../products/syschecker/syschecker.html">SysChecker</a></li>
+      <li><a href="../productos/prioritix/prioritix.html">PrioritiX</a></li>
+      <li><a href="../productos/syschecker/syschecker.html">SysChecker</a></li>
       <li class="divider"></li>
-      <li class="dropdown header" style="padding-left:15px;">Social Media Projects</li>
+      <li class="dropdown-header" style="padding-left:15px;">Proyectos Redes Sociales</li>
       <li><a class="dropdown-item-adj" href="http://www.wisebirk.com" target="_blank">Wisebirk</a></li>
-      <li><a class="dropdown-item-adj" href="html://www.ummahsocialbook.com" target="_blank">Ummah Social Book</a></li>
+      <li><a class="dropdown-item-adj" href="http://www.ummahsocialbook.com" target="_blank">Ummah Social Book</a></li>
       </ul>
       </li>
-      <li><a href="../support/support.html">Support</a></li>
+      <li><a href="../soporte/soporte.html">Soporte</a></li>
       <li class="dropdown">
-      <a href="../about/" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+      <a href="../acerca-de/" class="dropdown-toggle" data-toggle="dropdown">Acerca de <b class="caret"></b></a>
       <ul class="dropdown-menu">
-      <li><a href="../about/about-us.html">About us</a></li>
+      <li><a href="../acerca-de/quienes-somos.html">Quiénes Somos</a></li>
       </ul>
       </li>
-      <li class="active"><a href="../contact/fm-contact-us.cgi">Contact us</a></li>
+      <li class="active"><a href="../contacto/fm-contact-us.cgi">Contáctenos</a></li>
       </ul>
       </div><!--/.nav-collapse -->
       </div>
       </div>
       </div><!-- End Hidden Desktop -->
-      
       </div><!-- End Header & Menu bar -->
 
       <div class="container">
-
       <img src="../../assets/img/ID-201308201759.jpg" class="img-responsive" alt="">
-      <h2 class="margin-fix">Contact Sysformatics</h2>
-      
+      <h2 class="margin-fix">Contacte Sysformatics</h2>
       <div class="row">
       <div class="col-lg-4 col-sm-4">
       <div class="thumbnail thumbnail-fix">
       <div class="caption">
-      <h3 class="h3-fix">Enquiries</h3>
+      <h3 class="h3-fix">Consultas</h3>
       <address>
-      <dotted-underline>Email:</dotted-underline> <a href="mailto:info&#64;sysformatics.com">info&#64;sysformatics.com</a><br>
+      <dotted-underline>Email:</dotted-underline> <a href="mailto:info\@sysformatics.com">info&#64;sysformatics.com</a><br>
       <dotted-underline>Skype:</dotted-underline> <a href="skype:info.sysformatics?call">info.sysformatics</a>
       </address>
-      <h3 class="h3-fix">Support</h3>
+      <h3 class="h3-fix">Soporte</h3>
       <address>
       <dotted-underline>Email:</dotted-underline>  <a href="mailto:support&#64;sysformatics.com">support&#64;sysformatics.com</a><br>
       <dotted-underline>Skype:</dotted-underline> <a href="skype:support.sysformatics?call">support.sysformatics</a>
       </address><br>
-      <h3 class="h3-fix">Office Directory</h3>
-      <address>
-      <strong>EMEA</strong><br>
-      11 Thessaly Road<br>
-      London, SW8 4XN<br>
-      United Kingdom<br>
-      <dotted-underline>Tel:</dotted-underline> +44 (0) 79466 07895<br/>
-      </address>
+      <h3 class="h3-fix">Directorio de Oficinas</h3>
       <address>
       <strong>AMERICAS</strong><br>
       Calle 8A 11E-31<br>
@@ -246,72 +254,78 @@ _gaq.push(['_trackPageview']);
       Colombia<br>
       <dotted-underline>Tel:</dotted-underline> +57 (9) 7595 0046<br/>
       </address>
+      <address>
+      <strong>EMEA</strong><br>
+      45 Pearl Road<br>
+      London, E17 4QY<br>
+      United Kingdom<br>
+      <dotted-underline>Tel:</dotted-underline> +44 (0) 79466 07895<br/>
+      </address>
       </div>
       </div>
       </div>
       <div class="col-lg-8 col-sm-8">
       <div class="thumbnail thumbnail-fix">
       <div class="caption">
-      <h3 class="h3-fix">Feedback</h3>
-      <p>Have a question or comment about Sysformatics products and services?<br>
-      Please fill out the form below. We will respond to questions and comments as quickly as possible.</p>
-      <form  action="/sys/en/contact/FormMail.cgi" method='post'>
+      <h3 class="h3-fix">Comentarios</h3>
+      <p>¿Tiene alguna pregunta o comentario acerca de los productos y servicios de Sysformatics?<br>
+      <small>Por favor llene el siguiente formulario. Responderemos  a sus preguntas y comentarios lo antes posible.</small></p>
+      <form  action="/sys/es/contacto/FormMail.cgi" method='post'>
       <div class="row">
       <div class="col-lg-6">
       <div class="form-group">
-      <label for="firstname">First name</label>
-      <input type="text" class="form-control" id="feedbackInputFirstName1" name='realname' placeholder="Enter first name">
+      <label for="nombre">Nombre</label>
+      <input type="text" class="form-control" id="feedbackInputFirstName1" name='nombre' placeholder="Ingrese nombre">
       </div>
       </div>
       <div class="col-lg-6">
       <div class="form-group">
-      <label for="lastname">Last name</label>
-      <input type="text" class="form-control" id="feedbackInputLastName1" name='lastname' placeholder="Enter last name">
+      <label for="apellido">Apellido</label>
+      <input type="text" class="form-control" id="feedbackInputLastName1" name='apellido' placeholder="Ingrese apellido">
       </div>
       </div>
       </div>
       <div class="row">
       <div class="col-lg-6">
       <div class="form-group">
-      <label for="email">Email address</label>
-      <input type="email" class="form-control" id="feedbackInputEmail1" name='email' placeholder="Enter email">
+      <label for="email">Correo electrónico</label>
+      <input type="email" class="form-control" id="feedbackInputEmail1" name='email' placeholder="Ingrese email">
       </div>
       </div>
       <div class="col-lg-6">
       <div class="form-group">
-      <label for="telephone" style="width:100%">Telephone <small class="pull-right text-muted" style="padding-top:2px;padding-right:3px">Optional</small></label>
-      <input type="tel" class="form-control" id="feedbackInputTelephone1" name='telephone' placeholder="Enter telephone">
+      <label for="telefono" style="width:100%">Teléfono <small class="pull-right text-muted" style="padding-top:2px;padding-right:3px">Opcional</small></label>
+      <input type="tel" class="form-control" id="feedbackInputTelephone1" name='telefono' placeholder="Ingrese teléfono">
       </div>
       </div>
       </div>
       <div class="form-group">
-      <label for="subject">Subject</label>
-      <input type="text" class="form-control" id="feedbackInputSubject1" name='subject' placeholder="Enter summary">
+      <label for="asunto">Asunto</label>
+      <input type="text" class="form-control" id="feedbackInputSubject1" name='asunto' placeholder="Ingrese asunto">
       </div>
       <div class="form-group">
-      <label for="message">Message</label>
-      <textarea class="form-control" rows="3" id="feedbackInputMessage1" name='message' wrap=virtual></textarea>
+      <label for="mensaje">Mensaje</label>
+      <textarea class="form-control" rows="3" id="feedbackInputMessage1" name='mensaje' wrap=virtual></textarea>
       </div>
       <div class="form-group">
-      <label for="captcha">Enter the letters</label>
+      <label for="captcha">Ingrese las letras</label>
       <div class="row">
       <div class="col-sm-3">
-      <img src="/sys/en/contact/img/$md5sum.png" />
+      <img src="/sys/es/contacto/img/$md5sum.png" />
       </div>
       <div class="visible-sm">
       <br>
       </div>
       <div class="col-sm-9">
       <input type="text" class="form-control" name="captcha-text" id="captcha-text" />
+      </div>      
       </div>
-      
       </div>
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary">Enviar</button>
       <input type='hidden' name='recipient' value='info\@sysformatics.com' >
-      <input type='hidden' name='redirect' value="http://sysformatics.com/sys/en/contact/form-sent.html" >
+      <input type='hidden' name='redirect' value="http://sysformatics.com/sys/es/contacto/Formulario-enviado.html" >
       <input type='hidden' id="catch" name='captcha-md5sum' value="$md5sum" >
-      <input type='hidden' name="required" value="email,realname,lastname,subject,message">
+      <input type='hidden' name="required" value="email,nombre,apellido,asunto,mensaje">
       </form>
       </div>
       </div>
@@ -319,13 +333,13 @@ _gaq.push(['_trackPageview']);
       </div>
       
       <footer class="footer-margin">
-      <p lang="es"><a href="../../es/contacto/fm-contact-us.cgi">Español</a></p>
+      <p lang="en"><a href="../../en/contact/fm-contact-us.cgi">English</a></p>
       <hr>
-      <p><a href="../store/store.html">Store</a> &middot; <a href="../support/support.html">Support</a> &middot; <a href="../about/about-us.html">About us</a> &middot; <a href="../contact/fm-contact-us.cgi">Contact us</a></p>
+      <p><a href="../tienda/tienda.html">Tienda</a> &middot; <a href="../soporte/soporte.html">Soporte</a> &middot; <a href="../acerca-de/quienes-somos.html">Quiénes Somos</a> &middot; <a href="../contacto/fm-contact-us.cgi">Contáctenos</a></p>
       <p>&copy; 2013 Sysformatics.</p>
       </footer>
-      
-      </div><!-- /container -->
+
+      </div> <!-- /container -->
 
       <!-- Javascript
       ================================================== -->
@@ -366,7 +380,6 @@ _gaq.push(['_trackPageview']);
       })();
 
     </script><!-- Google Analytics END -->
-
 
 </body></html>
 END_OF_HTML
