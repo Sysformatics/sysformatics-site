@@ -111,65 +111,69 @@
 	</div>
       </div><!-- End Visible Desktop -->
 
-      <!-- Hidden Desktop -->
+     <!-- Hidden Desktop -->
       <div class="visible-sm">
 	<div class="navbar-inner-nav">
 	  <div class="container">
-	    <div class="col-4 col-sm-4 col-padd-fix">
-	      <a class="navbar-brand" href="../../index.html">Sysformatics</a>
-	    </div>
-	    <div class="col-4 col-sm-4" style="text-align:center;">
-	      <a href="../../tienda/tienda.html"><button type="button" class="btn btn-warning btn-store-m-top">
-		<i class="icon-shopping-cart"></i>
-	      </button></a>
-	    </div>
-	    <div class="col-4 col-sm-4">
-	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	    <div class="col-1 col-sm-1" style="padding-right:0;padding-left:0">
+	      <button type="button" class="navbar-toggle" style="left:-15px" data-toggle="collapse" data-target=".nav-collapse">
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
 	      </button>
 	    </div>
+	    <div class="col-5 col-sm-5" style="padding-left:0;padding-right:0">
+	      <a class="navbar-brand" href="../../index.html">Sysformatics</a>
+	    </div>
+	    <div class="col-6 col-sm-6" style="text-align:right;padding-right:5px;padding-left:0">
+	      <button type="button" class="navbar-toggle navbar-toggle-pos" onclick="window.location.href='../../tienda/tienda.html'">
+		<span class="glyphicon glyphicon-shopping-cart"></span>
+	      </button>
+	      <button type="button" class="navbar-toggle navbar-toggle-pos" onclick="window.location.href='../../contacto/fm-contact-us.cgi'">
+		<span class="glyphicon glyphicon-comment"></span>
+	      </button>
+	      <button type="button" class="navbar-toggle navbar-toggle-pos" onclick="window.location.href='../../soporte/soporte.html'">
+		<span class="glyphicon glyphicon-asterisk"></span>
+	      </button>
+	    </div>
+
 	    <div class="nav-collapse collapse">
-	      <hr class="style-one">
-	      <ul class="nav navbar-nav">
-		<li class="dropdown active">
-		  <a href="../../servicios/" class="dropdown-toggle" data-toggle="dropdown">Servicios <b class="caret"></b></a>
-		  <ul class="dropdown-menu">
-                    <li><a href="../../servicios/backup/copia-seguridad.html">Copia Seguridad en la Nube</a></li>
-                    <li><a href="../../servicios/email/administracion-email.html">Administración Correo Electrónico</a></li>
-                    <li><a href="../../servicios/web/desarrollo-web.html">Diseño & Desarrollo Web</a></li>
+	      <ul class="topnav nav navbar-nav navbar-nav-sm">		
+		<li class="dropdown-sm header-link"><a href="../../tienda/tienda.html">Tienda</a></li>
+		<li class="dropdown dropdown-sm">
+		  <a class="dropdown-toggle" data-toggle="collapse">Servicios <b class="caret"></b></a>
+		  <ul class="nav navbar-nav-sub-sm">
+		    <li><a href="../../servicios/backup/copia-seguridad.html">Copia Seguridad en la Nube</a></li>
+		    <li><a href="../../servicios/email/administracion-email.html">Administración Correo Electrónico</a></li>
+		    <li><a href="../../servicios/web/desarrollo-web.html">Diseño & Desarrollo Web</a></li>
                     <li class="divider"></li>
-                    <li class="dropdown-header" style="padding-left:15px;">Servicios de Soporte</li>
-                    <li class="active"><a class="dropdown-item-adj" href="../../servicios/soporte-ti/soporte-ti.html">Soporte TI</a></li>
-                    <li><a class="dropdown-item-adj" href="../../servicios/soporte-ti/preventivo-ti.html">Mantenimiento Preventivo TI</a></li>		    
+                    <li><a class="dropdown-item-adj" href="../../servicios/soporte-ti/soporte-ti.html">Soporte TI</a></li>
+                    <li><a class="dropdown-item-adj" href="../../servicios/soporte-ti/preventivo-ti.html">Mantenimiento Preventivo TI</a></li>
 		  </ul>
 		</li>
-		<li class="dropdown">
-		  <a href="../../productos/" class="dropdown-toggle" data-toggle="dropdown">Productos <b class="caret"></b></a>
-		  <ul class="dropdown-menu">
+		<li class="dropdown dropdown-sm">
+		  <a class="dropdown-toggle" data-toggle="collapse">Productos <b class="caret"></b></a>
+		  <ul class="nav navbar-nav-sub-sm">
                     <li><a href="../../productos/prioritix/prioritix.html">PrioritiX</a></li>
                     <li><a href="../../productos/syschecker/syschecker.html">SysChecker</a></li>
                     <li class="divider"></li>
-                    <li class="dropdown-header" style="padding-left:15px;">Proyectos Redes Sociales</li>
                     <li><a class="dropdown-item-adj" href="http://www.wisebirk.com" target="_blank">Wisebirk</a></li>
                     <li><a class="dropdown-item-adj" href="http://www.ummahsocialbook.com" target="_blank">Ummah Social Book</a></li>
 		  </ul>
 		</li>
-		<li><a href="../../soporte/soporte.html">Soporte</a></li>
-		<li class="dropdown">
-		  <a href="../../acerca-de/" class="dropdown-toggle" data-toggle="dropdown">Acerca de <b class="caret"></b></a>
-		  <ul class="dropdown-menu">
-		    <li><a href="../../acerca-de/quienes-somos.html">Quiénes Somos</a></li>
-		  </ul>
+		<li class="dropdown-sm header-link"><a href="../../soporte/soporte.html">Soporte</a></li>
+		<li class="dropdown dropdown-sm">
+		  <a class="dropdown-toggle" data-toggle="collapse">Acerca de <b class="caret"></b></a>
+		    <ul class="nav navbar-nav-sub-sm">
+		      <li><a href="../../acerca-de/quienes-somos.html">Quiénes Somos</a></li>
+		    </ul>
 		</li>
-		<li><a href="../../contacto/fm-contact-us.cgi">Contáctenos</a></li>
+		<li class="dropdown-sm header-link"><a href="../../contacto/fm-contact-us.cgi">Contáctenos</a></li>
 	      </ul>
-            </div><!--/.nav-collapse -->
+	    </div><!-- End nav-collapse -->
 	  </div>
 	</div>
       </div><!-- End Hidden Desktop -->
-
     </div><!-- End Header & Menu bar -->
 
     <div class="container">
@@ -188,6 +192,22 @@
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="../../../assets/js/bootstrap.min.js"></script>
     
+    <!-- Accordion dropdown menu helper -->
+    <script src="../../../assets/js/jquery-ui-1.10.3.accordion.js"></script>
+
+    <script>
+      // Accordion dropdown menu
+      $(function() {
+      $( ".topnav" ).accordion({active: "a.default",alwaysOpen: true,autoHeight:false,clearStyle: true,collapsible: true});
+      });
+      
+      //capture the click on the a tag
+      $(".topnav  .header-link a").click(function() {
+      window.location = $(this).attr('href');
+      return false;
+      });
+    </script>
+
     <!-- AddThis Smart Layers BEGIN -->
     <!-- Go to http://www.addthis.com/get/smart-layers to customize -->
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-520259f274c70552"></script>

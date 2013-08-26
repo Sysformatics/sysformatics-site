@@ -155,61 +155,67 @@ _gaq.push(['_trackPageview']);
       <div class="visible-sm">
       <div class="navbar-inner-nav">
       <div class="container">
-      <div class="col-4 col-sm-4 col-padd-fix">
-      <a class="navbar-brand" href="../../../index.html">Sysformatics</a>
-      </div>
-      <div class="col-4 col-sm-4" style="text-align:center;">
-      <a href="../store/store.html"><button type="button" class="btn btn-warning btn-store-m-top">
-      <i class="icon-shopping-cart"></i>
-      </button></a>
-      </div>
-      <div class="col-4 col-sm-4">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+      <div class="col-1 col-sm-1" style="padding-right:0;padding-left:0">
+      <button type="button" class="navbar-toggle" style="left:-15px" data-toggle="collapse" data-target=".nav-collapse">
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       </button>
       </div>
+      <div class="col-5 col-sm-5" style="padding-left:0;padding-right:0">
+      <a class="navbar-brand" href="../../../index.html">Sysformatics</a>
+      </div>
+      <div class="col-6 col-sm-6" style="text-align:right;padding-right:5px;padding-left:0">
+      <button type="button" class="navbar-toggle navbar-toggle-pos" onclick="window.location.href='../store/store.html'">
+      <span class="glyphicon glyphicon-shopping-cart"></span>
+      </button>
+      
+      <button type="button" class="navbar-toggle navbar-toggle-pos" onclick="window.location.href='../contact/fm-contact-us.cgi'">
+      <span class="glyphicon glyphicon-comment"></span>
+      </button>
+      
+      <button type="button" class="navbar-toggle navbar-toggle-pos" onclick="window.location.href='../support/support.html'">
+      <span class="glyphicon glyphicon-asterisk"></span>
+      </button>
+      </div>
+
       <div class="nav-collapse collapse">
-      <hr class="style-one">
-      <ul class="nav navbar-nav">
-      <li class="dropdown">
-      <a href="../services/" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
-      <ul class="dropdown-menu">
+      <ul class="topnav nav navbar-nav navbar-nav-sm">		
+      <li class="dropdown-sm header-link"><a href="../store/store.html">Store</a></li>
+      <li class="dropdown dropdown-sm">
+      <a class="dropdown-toggle" data-toggle="collapse">Services <b class="caret"></b></a>
+      <ul class="nav navbar-nav-sub-sm">
       <li><a href="../services/backup/backup.html">Online Backup</a></li>
       <li><a href="../services/email/email-man.html">Email Management</a></li>
       <li><a href="../services/web/web-design.html">Web Design & Development</a></li>
       <li class="divider"></li>
-      <li class="dropdown-header" style="padding-left:15px;">Support Services</li>
       <li><a class="dropdown-item-adj" href="../services/it-support/it-support.html">IT Support</a></li>
-      <li><a class="dropdown-item-adj" href="../services/it-support/it-preventive.html">IT Preventive Maintenance</a></li>		    
+      <li><a class="dropdown-item-adj" href="../services/it-support/it-preventive.html">IT Preventive Maintenance</a></li>
       </ul>
       </li>
-      <li class="dropdown">
-      <a href="../products/" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
-      <ul class="dropdown-menu">
+      <li class="dropdown dropdown-sm">
+      <a class="dropdown-toggle" data-toggle="collapse">Products <b class="caret"></b></a>
+      <ul class="nav navbar-nav-sub-sm">
       <li><a href="../products/prioritix/prioritix.html">PrioritiX</a></li>
       <li><a href="../products/syschecker/syschecker.html">SysChecker</a></li>
       <li class="divider"></li>
-      <li class="dropdown header" style="padding-left:15px;">Social Media Projects</li>
       <li><a class="dropdown-item-adj" href="http://www.wisebirk.com" target="_blank">Wisebirk</a></li>
-      <li><a class="dropdown-item-adj" href="html://www.ummahsocialbook.com" target="_blank">Ummah Social Book</a></li>
+      <li><a class="dropdown-item-adj" href="http://www.ummahsocialbook.com" target="_blank">Ummah Social Book</a></li>
       </ul>
       </li>
-      <li><a href="../support/support.html">Support</a></li>
-      <li class="dropdown">
-      <a href="../about/" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
-      <ul class="dropdown-menu">
+      <li class="dropdown-sm header-link"><a href="../support/support.html">Support</a></li>
+      <li class="dropdown dropdown-sm">
+      <a class="dropdown-toggle" data-toggle="collapse">About <b class="caret"></b></a>
+      <ul class="nav navbar-nav-sub-sm">
       <li><a href="../about/about-us.html">About us</a></li>
       </ul>
       </li>
-      <li class="active"><a href="../contact/fm-contact-us.cgi">Contact us</a></li>
+      <li class="dropdown-sm header-link"><a href="../contact/fm-contact-us.cgi">Contact us</a></li>
       </ul>
-      </div><!--/.nav-collapse -->
+      </div><!-- End nav-collapse -->
       </div>
       </div>
       </div><!-- End Hidden Desktop -->
-      
       </div><!-- End Header & Menu bar -->
 
       <div class="container">
@@ -332,41 +338,57 @@ _gaq.push(['_trackPageview']);
       <script src="http://code.jquery.com/jquery.js"></script>
       <script src="../../assets/js/bootstrap.min.js"></script>
       
-      <!-- AddThis Smart Layers BEGIN -->
-      <!-- Go to http://www.addthis.com/get/smart-layers to customize -->
-      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-520259f274c70552"></script>
-      <script type="text/javascript">
-      addthis.layers({
-	  'theme' : 'gray',
-	  'share' : {
-	      'position' : 'right',
-	      'numPreferredServices' : 4
-	  }, 
-		  'follow' : {
-		      'services' : [
-			  {'service': 'facebook', 'id': 'pages/Sysformatics/482146858508732'},
-			  {'service': 'twitter', 'id': 'Sysformatics'},
-			  {'service': 'linkedin', 'id': 'sysformatics', 'usertype': 'company'}
-			  ]
-	      }   
-		     });
-    </script><!-- AddThis Smart Layers END -->
+      <!-- Accordion dropdown menu helper -->
+      <script src="../../assets/js/jquery-ui-1.10.3.accordion.js"></script>
+      
+      <script>
+      // Accordion dropdown menu
+      $(function() {
+	  $( ".topnav" ).accordion({active: "a.default",alwaysOpen: true,autoHeight:false,clearStyle: true,collapsible: true});
+ });
 
-	<!-- Google Analytics BEGIN -->
-	<script type="text/javascript">
+//capture the click on the a tag
+    $(".topnav  .header-link a").click(function() {
+	window.location = $(this).attr('href');
+return false;
+    });
+</script>
 
-	var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-35786145-1']);
-    _gaq.push(['_trackPageview']);
+    <!-- AddThis Smart Layers BEGIN -->
+    <!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-520259f274c70552"></script>
+    <script type="text/javascript">
+    addthis.layers({
+    'theme' : 'gray',
+    'share' : {
+	'position' : 'right',
+	'numPreferredServices' : 4
+}, 
+    'follow' : {
+	'services' : [
+	    {'service': 'facebook', 'id': 'pages/Sysformatics/482146858508732'},
+	    {'service': 'twitter', 'id': 'Sysformatics'},
+	    {'service': 'linkedin', 'id': 'sysformatics', 'usertype': 'company'}
+	    ]
+}   
+		   });
+</script><!-- AddThis Smart Layers END -->
 
-    (function() {
-	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
+    <!-- Google Analytics BEGIN -->
+    <script type="text/javascript">
 
-    </script><!-- Google Analytics END -->
+    var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-35786145-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+ })();
+
+</script><!-- Google Analytics END -->
 
 
-</body></html>
-END_OF_HTML
+    </body></html>
+    END_OF_HTML
