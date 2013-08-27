@@ -223,10 +223,10 @@ _gaq.push(['_trackPageview']);
 		<li class="dropdown dropdown-sm">
 		  <a class="dropdown-toggle" data-toggle="collapse">Acerca de <b class="caret"></b></a>
 		    <ul class="nav navbar-nav-sub-sm">
-		      <li><a href="../acerca-de/quienes-somos.html">Qui√©nes Somos</a></li>
+		      <li><a href="../acerca-de/quienes-somos.html">QuiÈnes somos</a></li>
 		    </ul>
 		</li>
-		<li class="dropdown-sm header-link"><a href="../contacto/fm-contact-us.cgi">Cont√°ctenos</a></li>
+		<li class="dropdown-sm header-link"><a href="../contacto/fm-contact-us.cgi">Cont·ctenos</a></li>
 	      </ul>
 	    </div><!-- End nav-collapse -->
 	  </div>
@@ -356,13 +356,13 @@ _gaq.push(['_trackPageview']);
 
     <script>
       // Accordion dropdown menu
-      $(function() {
-      $( ".topnav" ).accordion({active: "a.default",alwaysOpen: true,autoHeight:false,clearStyle: true,collapsible: true});
+      jQuery(function() {
+      jQuery( ".topnav" ).accordion({active: "a.default",alwaysOpen: true,autoHeight:false,clearStyle: true,collapsible: true});
       });
       
       //capture the click on the a tag
-      $(".topnav  .header-link a").click(function() {
-      window.location = $(this).attr('href');
+      jQuery(".topnav  .header-link a").click(function() {
+      window.location = jQuery(this).attr('href');
       return false;
       });
     </script>

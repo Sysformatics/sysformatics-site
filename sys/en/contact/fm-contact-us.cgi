@@ -337,21 +337,22 @@ _gaq.push(['_trackPageview']);
       ================================================== -->
       <script src="http://code.jquery.com/jquery.js"></script>
       <script src="../../assets/js/bootstrap.min.js"></script>
-      
+
       <!-- Accordion dropdown menu helper -->
       <script src="../../assets/js/jquery-ui-1.10.3.accordion.js"></script>
       
-      <script>
+      <script typpe="text/javascript">
       // Accordion dropdown menu
-      $(function() {
-	  $( ".topnav" ).accordion({active: "a.default",alwaysOpen: true,autoHeight:false,clearStyle: true,collapsible: true});
+      jQuery(function() {
+	  jQuery( ".topnav" ).accordion({active: "a.default",alwaysOpen: true,autoHeight:false,clearStyle: true,collapsible: true});
  });
 
 //capture the click on the a tag
-    $(".topnav  .header-link a").click(function() {
-	window.location = $(this).attr('href');
+    jQuery(".topnav  .header-link a").click(function() {
+	window.location = jQuery(this).attr('href');
 return false;
-    });
+    });      
+
 </script>
 
     <!-- AddThis Smart Layers BEGIN -->
@@ -385,10 +386,10 @@ _gaq.push(['_trackPageview']);
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
- })();
+      })();
 
-</script><!-- Google Analytics END -->
+    </script><!-- Google Analytics END -->
 
 
-    </body></html>
-    END_OF_HTML
+</body></html>
+END_OF_HTML

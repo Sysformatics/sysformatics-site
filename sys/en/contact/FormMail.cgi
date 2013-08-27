@@ -723,70 +723,88 @@ sub error {
 	</div>
       </div><!-- End Visible Desktop -->
 
-      <!-- Hidden Desktop -->
+            <!-- Hidden Desktop -->
       <div class="visible-sm">
-	<div class="navbar-inner-nav">
-	  <div class="container">
-	    <div class="col-1 col-sm-1" style="padding-right:0;padding-left:0">
-	      <button type="button" class="navbar-toggle" style="left:-15px" data-toggle="collapse" data-target=".nav-collapse">
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-	      </button>
-	    </div>
-	    <div class="col-5 col-sm-5" style="padding-left:0;padding-right:0">
-	      <a class="navbar-brand" href="../../../index.html">Sysformatics</a>
-	    </div>
-	    <div class="col-6 col-sm-6" style="text-align:right;padding-right:5px;padding-left:0">
-	      <button type="button" class="navbar-toggle navbar-toggle-pos" onclick="window.location.href='../store/store.html'">
-		<span class="glyphicon glyphicon-shopping-cart"></span>
-	      </button>
-	      
-	      <button type="button" class="navbar-toggle navbar-toggle-pos" onclick="window.location.href='../contact/fm-contact-us.cgi'">
-		<span class="glyphicon glyphicon-comment"></span>
-	      </button>
-	      
-	      <button type="button" class="navbar-toggle navbar-toggle-pos" onclick="window.location.href='../support/support.html'">
-		<span class="glyphicon glyphicon-asterisk"></span>
-	      </button>
-	    </div>
+      <div class="navbar-inner-nav">
+      <div class="container">
+      <div class="col-1 col-sm-1" style="padding-right:0;padding-left:0">
+      <button type="button" class="navbar-toggle" style="left:-15px" data-toggle="collapse" data-target=".nav-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+      </div>
+      <div class="col-5 col-sm-5" style="padding-left:0;padding-right:0">
+      <a class="navbar-brand" href="../../../index.html">Sysformatics</a>
+      </div>
+      <div class="col-6 col-sm-6" style="text-align:right;padding-right:5px;padding-left:0">
+      <button type="button" class="navbar-toggle navbar-toggle-pos" onclick="window.location.href=';
 
-	    <div class="nav-collapse collapse">
-	      <ul class="topnav nav navbar-nav navbar-nav-sm">		
-		<li class="dropdown-sm header-link"><a href="../store/store.html">Store</a></li>
-		<li class="dropdown dropdown-sm">
-		  <a class="dropdown-toggle" data-toggle="collapse">Services <b class="caret"></b></a>
-		  <ul class="nav navbar-nav-sub-sm">
-		    <li><a href="../services/backup/backup.html">Online Backup</a></li>
-		    <li><a href="../services/email/email-man.html">Email Management</a></li>
-		    <li><a href="../services/web/web-design.html">Web Design & Development</a></li>
-                    <li class="divider"></li>
-                    <li><a class="dropdown-item-adj" href="../services/it-support/it-support.html">IT Support</a></li>
-                    <li><a class="dropdown-item-adj" href="../services/it-support/it-preventive.html">IT Preventive Maintenance</a></li>
-		  </ul>
-		</li>
-		<li class="dropdown dropdown-sm">
-		  <a class="dropdown-toggle" data-toggle="collapse">Products <b class="caret"></b></a>
-		  <ul class="nav navbar-nav-sub-sm">
-                    <li><a href="../products/prioritix/prioritix.html">PrioritiX</a></li>
-                    <li><a href="../products/syschecker/syschecker.html">SysChecker</a></li>
-                    <li class="divider"></li>
-                    <li><a class="dropdown-item-adj" href="http://www.wisebirk.com" target="_blank">Wisebirk</a></li>
-                    <li><a class="dropdown-item-adj" href="http://www.ummahsocialbook.com" target="_blank">Ummah Social Book</a></li>
-		  </ul>
-		</li>
-		<li class="dropdown-sm header-link"><a href="../support/support.html">Support</a></li>
-		<li class="dropdown dropdown-sm">
-		  <a class="dropdown-toggle" data-toggle="collapse">About <b class="caret"></b></a>
-		  <ul class="nav navbar-nav-sub-sm">
-		    <li><a href="../about/about-us.html">About us</a></li>
-		  </ul>
-		</li>
-		<li class="dropdown-sm header-link"><a href="../contact/fm-contact-us.cgi">Contact us</a></li>
-	      </ul>
-	    </div><!-- End nav-collapse -->
-	  </div>
-	</div>
+$layout_1 .= "
+'../store/store.html'";
+
+$layout_1 .= '
+">
+      <span class="glyphicon glyphicon-shopping-cart"></span>
+      </button>
+      
+      <button type="button" class="navbar-toggle navbar-toggle-pos" onclick="window.location.href=';
+
+$layout_1 .= "
+'../contact/fm-contact-us.cgi'";
+
+$layout_1 .= '
+">
+      <span class="glyphicon glyphicon-comment"></span>
+      </button>
+      
+      <button type="button" class="navbar-toggle navbar-toggle-pos" onclick="window.location.href=';
+
+$layout_1 .= "
+'../support/support.html'";
+
+$layout_1 .= '
+">
+      <span class="glyphicon glyphicon-asterisk"></span>
+      </button>
+      </div>
+
+      <div class="nav-collapse collapse">
+      <ul class="topnav nav navbar-nav navbar-nav-sm">		
+      <li class="dropdown-sm header-link"><a href="../store/store.html">Store</a></li>
+      <li class="dropdown dropdown-sm">
+      <a class="dropdown-toggle" data-toggle="collapse">Services <b class="caret"></b></a>
+      <ul class="nav navbar-nav-sub-sm">
+      <li><a href="../services/backup/backup.html">Online Backup</a></li>
+      <li><a href="../services/email/email-man.html">Email Management</a></li>
+      <li><a href="../services/web/web-design.html">Web Design & Development</a></li>
+      <li class="divider"></li>
+      <li><a class="dropdown-item-adj" href="../services/it-support/it-support.html">IT Support</a></li>
+      <li><a class="dropdown-item-adj" href="../services/it-support/it-preventive.html">IT Preventive Maintenance</a></li>
+      </ul>
+      </li>
+      <li class="dropdown dropdown-sm">
+      <a class="dropdown-toggle" data-toggle="collapse">Products <b class="caret"></b></a>
+      <ul class="nav navbar-nav-sub-sm">
+      <li><a href="../products/prioritix/prioritix.html">PrioritiX</a></li>
+      <li><a href="../products/syschecker/syschecker.html">SysChecker</a></li>
+      <li class="divider"></li>
+      <li><a class="dropdown-item-adj" href="http://www.wisebirk.com" target="_blank">Wisebirk</a></li>
+      <li><a class="dropdown-item-adj" href="http://www.ummahsocialbook.com" target="_blank">Ummah Social Book</a></li>
+      </ul>
+      </li>
+      <li class="dropdown-sm header-link"><a href="../support/support.html">Support</a></li>
+      <li class="dropdown dropdown-sm">
+      <a class="dropdown-toggle" data-toggle="collapse">About <b class="caret"></b></a>
+      <ul class="nav navbar-nav-sub-sm">
+      <li><a href="../about/about-us.html">About us</a></li>
+      </ul>
+      </li>
+      <li class="dropdown-sm header-link"><a href="../contact/fm-contact-us.cgi">Contact us</a></li>
+      </ul>
+      </div><!-- End nav-collapse -->
+      </div>
+      </div>
       </div><!-- End Hidden Desktop -->
     </div><!-- End Header & Menu bar -->
 	
@@ -854,18 +872,18 @@ sub error {
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="../../assets/js/bootstrap.min.js"></script>
 
- <!-- Accordion dropdown menu helper -->
+    <!-- Accordion dropdown menu helper -->
     <script src="../../assets/js/jquery-ui-1.10.3.accordion.js"></script>
 
     <script>
       // Accordion dropdown menu
-      $(function() {
-      $( ".topnav" ).accordion({active: "a.default",alwaysOpen: true,autoHeight:false,clearStyle: true,collapsible: true});
+      jQuery(function() {
+      jQuery( ".topnav" ).accordion({active: "a.default",alwaysOpen: true,autoHeight:false,clearStyle: true,collapsible: true});
       });
       
       //capture the click on the a tag
-      $(".topnav  .header-link a").click(function() {
-      window.location = $(this).attr('href');
+      jQuery(".topnav  .header-link a").click(function() {
+      window.location = jQuery(this).attr("href");
       return false;
       });
     </script>

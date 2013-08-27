@@ -466,7 +466,7 @@ sub send_mail {
 
     # Check for Message Subject
     if ($Config{'asunto'}) { print MAIL "Asunto: $Config{'asunto'}\n\n" }
-    else                    { print MAIL "Asunto: Comunicación de visitante a la página web sysformatics.com\n\n" }
+    else                    { print MAIL "Asunto: ComunicaciÃ³n de visitante a la pÃ¡gina web sysformatics.com\n\n" }
 
     print MAIL "Below is the result of your feedback form.  It was submitted by\n";
     print MAIL "$Config{'nombre'} $Config{'apellido'} ($Config{'email'}) on $date\n";
@@ -623,7 +623,7 @@ sub error {
     $layout_1 = '
     <head>
     <meta charset="UTF-8">
-    <title>Sysformatics | Contáctenos</title>
+    <title>Sysformatics | ContÃ¡ctenos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Sysformatics">
     <meta name="description" content="">
@@ -733,7 +733,7 @@ $layout_1 .= '
       </div>
       </div><!-- End Visible Desktop -->
 
-            <!-- Hidden Desktop -->
+           <!-- Hidden Desktop -->
       <div class="visible-sm">
 	<div class="navbar-inner-nav">
 	  <div class="container">
@@ -748,13 +748,31 @@ $layout_1 .= '
 	      <a class="navbar-brand" href="../index.html">Sysformatics</a>
 	    </div>
 	    <div class="col-6 col-sm-6" style="text-align:right;padding-right:5px;padding-left:0">
-	      <button type="button" class="navbar-toggle navbar-toggle-pos" onclick="window.location.href='../tienda/tienda.html'">
+	      <button type="button" class="navbar-toggle navbar-toggle-pos" onclick="window.location.href=';
+
+$layout_1 .= "
+'../tienda/tienda.html'";
+
+$layout_1 .= '
+">
 		<span class="glyphicon glyphicon-shopping-cart"></span>
 	      </button>
-	      <button type="button" class="navbar-toggle navbar-toggle-pos" onclick="window.location.href='../contacto/fm-contact-us.cgi'">
+	      <button type="button" class="navbar-toggle navbar-toggle-pos" onclick="window.location.href=';
+
+$layout_1 .= "
+'../contacto/fm-contact-us.cgi'";
+
+$layout_1 .= '
+">
 		<span class="glyphicon glyphicon-comment"></span>
 	      </button>
-	      <button type="button" class="navbar-toggle navbar-toggle-pos" onclick="window.location.href='../soporte/soporte.html'">
+	      <button type="button" class="navbar-toggle navbar-toggle-pos" onclick="window.location.href=';
+
+$layout_1 .= "
+'../soporte/soporte.html'";
+
+$layout_1 .= '
+">
 		<span class="glyphicon glyphicon-asterisk"></span>
 	      </button>
 	    </div>
@@ -766,7 +784,7 @@ $layout_1 .= '
 		  <a class="dropdown-toggle" data-toggle="collapse">Servicios <b class="caret"></b></a>
 		  <ul class="nav navbar-nav-sub-sm">
 		    <li><a href="../servicios/backup/copia-seguridad.html">Copia Seguridad en la Nube</a></li>
-		    <li><a href="../servicios/email/administracion-email.html">Administración Correo Electrónico</a></li>
+		    <li><a href="../servicios/email/administracion-email.html">Administración Correo ElectrÃ³nico</a></li>
 		    <li><a href="../servicios/web/desarrollo-web.html">Diseño & Desarrollo Web</a></li>
                     <li class="divider"></li>
                     <li><a class="dropdown-item-adj" href="../servicios/soporte-ti/soporte-ti.html">Soporte TI</a></li>
@@ -787,7 +805,7 @@ $layout_1 .= '
 		<li class="dropdown dropdown-sm">
 		  <a class="dropdown-toggle" data-toggle="collapse">Acerca de <b class="caret"></b></a>
 		    <ul class="nav navbar-nav-sub-sm">
-		      <li><a href="../acerca-de/quienes-somos.html">Quiénes Somos</a></li>
+		      <li><a href="../acerca-de/quienes-somos.html">Quiénes somos</a></li>
 		    </ul>
 		</li>
 		<li class="dropdown-sm header-link"><a href="../contacto/fm-contact-us.cgi">Contáctenos</a></li>
@@ -795,7 +813,7 @@ $layout_1 .= '
 	    </div><!-- End nav-collapse -->
 	  </div>
 	</div>
-      </div><!-- End Hidden Desktop -->
+      </div><!-- End Hidden Desktop -->           
       </div><!-- End Header & Menu bar -->
 
       <div class="container">
@@ -866,13 +884,13 @@ $layout_2 = '
 
     <script>
       // Accordion dropdown menu
-      $(function() {
-      $( ".topnav" ).accordion({active: "a.default",alwaysOpen: true,autoHeight:false,clearStyle: true,collapsible: true});
+      jQuery(function() {
+      jQuery( ".topnav" ).accordion({active: "a.default",alwaysOpen: true,autoHeight:false,clearStyle: true,collapsible: true});
       });
       
       //capture the click on the a tag
-      $(".topnav  .header-link a").click(function() {
-      window.location = $(this).attr('href');
+      jQuery(".topnav  .header-link a").click(function() {
+      window.location = jQuery(this).attr("href");
       return false;
       });
     </script>
