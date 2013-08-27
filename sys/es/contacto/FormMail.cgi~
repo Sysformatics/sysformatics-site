@@ -623,7 +623,7 @@ sub error {
     $layout_1 = '
     <head>
     <meta charset="UTF-8">
-    <title>Sysformatics | Contáctenos</title>
+    <title>Sysformatics | ContÃ¡ctenos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Sysformatics">
     <meta name="description" content="">
