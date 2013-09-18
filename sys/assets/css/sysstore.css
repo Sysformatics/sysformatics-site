@@ -31,12 +31,9 @@
 	}
 	.header h4 {
 	font-weight: normal;
-	text-align: right;
-	padding-top: 41px;
-	padding-right: 2px;
-	}
-	@media (max-width: 900px){
-	.header h4 {padding-top: 65px;}
+	text-align: left;
+	padding-left: 265px;
+	margin-top: -8px;
 	}
 	
 	/* CUSTOMISE NAVIGATION BAR
