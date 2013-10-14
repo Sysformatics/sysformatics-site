@@ -692,7 +692,7 @@ sub error {
 		  <li><a href="../services/web/web-design.html">Web Design & Development</a></li>
 		  <li class="divider"></li>
 		  <li class="dropdown-header">Support Services</li>
-		  <li><a class="dropdown-item-adj" href="../services/it-support/it-support.html">IT Support</a></li>
+		  <li><a class="dropdown-item-adj" href="../services/it-support/it-support.html">IT Support Services</a></li>
 		  <li><a class="dropdown-item-adj" href="../services/it-support/it-preventive.html">IT Preventive Maintenance</a></li>
 		</ul>
 	      </li>
@@ -701,10 +701,6 @@ sub error {
 		<ul class="dropdown-menu">
 		  <li><a href="../products/prioritix/prioritix.html">PrioritiX</a></li>
 		  <li><a href="../products/syschecker/syschecker.html">SysChecker</a></li>
-		  <li class="divider"></li>
-		  <li class="dropdown-header">Social Media Projects</li>
-		  <li><a class="dropdown-item-adj" href="http://www.wisebirk.com" target="_blank">Wisebirk</a></li>
-		  <li><a class="dropdown-item-adj" href="http://www.ummahsocialbook.com" target="_blank">Ummah Social Book</a></li>
 		</ul>
               </li>
 	      <li><a href="../support/support.html">Support</a></li>
@@ -715,9 +711,6 @@ sub error {
 		</ul>
 	      </li>
 	      <li class="active"><a href="../contact/fm-contact-us.cgi">Contact us</a></li>
-	    </ul>
-	    <ul class="nav navbar-nav pull-right">
-	      <li class="btn-warning"><a href="../store/store.html">Store</a></li>
 	    </ul>
 	  </div>
 	</div>
@@ -745,7 +738,7 @@ $layout_1 .= "
 
 $layout_1 .= '
 ">
-      <span class="glyphicon glyphicon-shopping-cart"></span>
+     <img src="../../assets/img/sysstore-logo.png" height="29"></img>
       </button>
       
       <button type="button" class="navbar-toggle navbar-toggle-pos" onclick="window.location.href=';
@@ -771,7 +764,6 @@ $layout_1 .= '
 
       <div class="nav-collapse collapse">
       <ul class="topnav nav navbar-nav navbar-nav-sm">		
-      <li class="dropdown-sm header-link"><a href="../store/store.html">Store</a></li>
       <li class="dropdown dropdown-sm">
       <a class="dropdown-toggle" data-toggle="collapse">Services <b class="caret"></b></a>
       <ul class="nav navbar-nav-sub-sm">
@@ -779,7 +771,7 @@ $layout_1 .= '
       <li><a href="../services/email/email-man.html">Email Management</a></li>
       <li><a href="../services/web/web-design.html">Web Design & Development</a></li>
       <li class="divider"></li>
-      <li><a class="dropdown-item-adj" href="../services/it-support/it-support.html">IT Support</a></li>
+      <li><a class="dropdown-item-adj" href="../services/it-support/it-support.html">IT Support Services</a></li>
       <li><a class="dropdown-item-adj" href="../services/it-support/it-preventive.html">IT Preventive Maintenance</a></li>
       </ul>
       </li>
@@ -788,9 +780,6 @@ $layout_1 .= '
       <ul class="nav navbar-nav-sub-sm">
       <li><a href="../products/prioritix/prioritix.html">PrioritiX</a></li>
       <li><a href="../products/syschecker/syschecker.html">SysChecker</a></li>
-      <li class="divider"></li>
-      <li><a class="dropdown-item-adj" href="http://www.wisebirk.com" target="_blank">Wisebirk</a></li>
-      <li><a class="dropdown-item-adj" href="http://www.ummahsocialbook.com" target="_blank">Ummah Social Book</a></li>
       </ul>
       </li>
       <li class="dropdown-sm header-link"><a href="../support/support.html">Support</a></li>
@@ -861,7 +850,7 @@ $layout_1 .= '
 <footer class="footer-margin">
 	<p lang="es"><a href="../../es/contacto/fm-contact-us.cgi">Español</a></p>
 	<hr>
-        <p><a href="../store/store.html">Store</a> &middot; <a href="../support/support.html">Support</a> &middot; <a href="../about/about-us.html">About us</a> &middot; <a href="../contact/fm-contact-us.cgi">Contact us</a></p>
+        <p><a href="../support/support.html">Support</a> &middot; <a href="../about/about-us.html">About</a> &middot; <a href="../contact/fm-contact-us.cgi">Contact</a></p>
 	<p>&copy; 2013 Sysformatics.</p>
       </footer>
 	  

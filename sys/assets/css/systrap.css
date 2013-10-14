@@ -67,6 +67,7 @@
       text-shadow: 0 1px 0 #7A849A;
       border-radius: 0;
       }
+      
       .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
       background-color: #4F5D7D;
       box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125) inset;
@@ -88,7 +89,16 @@
       .navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner {
       border-width: 1px 0;
       }
-
+      
+	.btn-contact > a {
+	color: #A61701 !important;
+	text-shadow: 0 1px 0 #7A849A !important;
+	}
+	.btn-contact > a:hover {
+	color: #FFFFFF !important;
+	}
+	
+		
       /* CUSTOMISE DROPDOWN MENUS
       -------------------------------------------------- */
       .navbar .nav li.dropdown > .dropdown-toggle .caret {
@@ -164,11 +174,11 @@
 	color: #FFB302;
 	}
 	.glyphicon-comment:before {
-	font-size: 26px;
+	//font-size: 26px;
 	color: #4F5D7D;	
 	}
 	.glyphicon-asterisk:before {
-	font-size: 26px;
+	//font-size: 26px;
 	color: #4F5D7D;	
 	}
 	.nav-collapse {

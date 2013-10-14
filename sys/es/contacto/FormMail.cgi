@@ -711,10 +711,6 @@ $layout_1 .= '
       <ul class="dropdown-menu">
       <li><a href="../productos/prioritix/prioritix.html">PrioritiX</a></li>
       <li><a href="../productos/syschecker/syschecker.html">SysChecker</a></li>
-      <li class="divider"></li>
-      <li class="dropdown-header">Proyectos Redes Sociales</li>
-      <li><a class="dropdown-item-adj" href="http://www.wisebirk.com" target="_blank">Wisebirk</a></li>
-      <li><a class="dropdown-item-adj" href="http://www.ummahsocialbook.com" target="_blank">Ummah Social Book</a></li>
       </ul>
       </li>
       <li><a href="../soporte/soporte.html">Soporte</a></li>
@@ -725,9 +721,6 @@ $layout_1 .= '
       </ul>
       </li>
       <li class="active"><a href="../contacto/fm-contact-us.cgi">Contáctenos</a></li>
-      </ul>
-      <ul class="nav navbar-nav pull-right">
-      <li class="btn-warning"><a href="../tienda/tienda.html">Tienda</a></li>
       </ul>
       </div>
       </div>
@@ -751,15 +744,6 @@ $layout_1 .= '
 	      <button type="button" class="navbar-toggle navbar-toggle-pos" onclick="window.location.href=';
 
 $layout_1 .= "
-'../tienda/tienda.html'";
-
-$layout_1 .= '
-">
-		<span class="glyphicon glyphicon-shopping-cart"></span>
-	      </button>
-	      <button type="button" class="navbar-toggle navbar-toggle-pos" onclick="window.location.href=';
-
-$layout_1 .= "
 '../contacto/fm-contact-us.cgi'";
 
 $layout_1 .= '
@@ -779,7 +763,6 @@ $layout_1 .= '
 
 	    <div class="nav-collapse collapse">
 	      <ul class="topnav nav navbar-nav navbar-nav-sm">		
-		<li class="dropdown-sm header-link"><a href="../tienda/tienda.html">Tienda</a></li>
 		<li class="dropdown dropdown-sm">
 		  <a class="dropdown-toggle" data-toggle="collapse">Servicios <b class="caret"></b></a>
 		  <ul class="nav navbar-nav-sub-sm">
@@ -796,9 +779,6 @@ $layout_1 .= '
 		  <ul class="nav navbar-nav-sub-sm">
                     <li><a href="../productos/prioritix/prioritix.html">PrioritiX</a></li>
                     <li><a href="../productos/syschecker/syschecker.html">SysChecker</a></li>
-                    <li class="divider"></li>
-                    <li><a class="dropdown-item-adj" href="http://www.wisebirk.com" target="_blank">Wisebirk</a></li>
-                    <li><a class="dropdown-item-adj" href="http://www.ummahsocialbook.com" target="_blank">Ummah Social Book</a></li>
 		  </ul>
 		</li>
 		<li class="dropdown-sm header-link"><a href="../soporte/soporte.html">Soporte</a></li>
@@ -868,7 +848,7 @@ $layout_2 = '
       <footer class="footer-margin">
       <p lang="en"><a href="../../en/contact/fm-contact-us.cgi">English</a></p>
       <hr>
-      <p><a href="../tienda/tienda.html">Tienda</a> &middot; <a href="../soporte/soporte.html">Soporte</a> &middot; <a href="../acerca-de/quienes-somos.html">Quiénes Somos</a> &middot; <a href="../contacto/fm-contact-us.cgi">Contáctenos</a></p>
+      <p><a href="../soporte/soporte.html">Soporte</a> &middot; <a href="../acerca-de/quienes-somos.html">Quiénes Somos</a> &middot; <a href="../contacto/fm-contact-us.cgi">Contáctenos</a></p>
       <p>&copy; 2013 Sysformatics.</p>
       </footer>
 

@@ -147,10 +147,6 @@ _gaq.push(['_trackPageview']);
       <ul class="dropdown-menu">
       <li><a href="../productos/prioritix/prioritix.html">PrioritiX</a></li>
       <li><a href="../productos/syschecker/syschecker.html">SysChecker</a></li>
-      <li class="divider"></li>
-      <li class="dropdown-header">Proyectos Redes Sociales</li>
-      <li><a class="dropdown-item-adj" href="http://www.wisebirk.com" target="_blank">Wisebirk</a></li>
-      <li><a class="dropdown-item-adj" href="http://www.ummahsocialbook.com" target="_blank">Ummah Social Book</a></li>
       </ul>
       </li>
       <li><a href="../soporte/soporte.html">Soporte</a></li>
@@ -161,9 +157,6 @@ _gaq.push(['_trackPageview']);
       </ul>
       </li>
       <li class="active"><a href="../contacto/fm-contact-us.cgi">Contáctenos</a></li>
-      </ul>
-      <ul class="nav navbar-nav pull-right">
-      <li class="btn-warning"><a href="../tienda/tienda.html">Tienda</a></li>
       </ul>
       </div>
       </div>
@@ -184,9 +177,6 @@ _gaq.push(['_trackPageview']);
 	      <a class="navbar-brand" href="../index.html">Sysformatics</a>
 	    </div>
 	    <div class="col-6 col-sm-6" style="text-align:right;padding-right:5px;padding-left:0">
-	      <button type="button" class="navbar-toggle navbar-toggle-pos" onclick="window.location.href='../tienda/tienda.html'">
-		<span class="glyphicon glyphicon-shopping-cart"></span>
-	      </button>
 	      <button type="button" class="navbar-toggle navbar-toggle-pos" onclick="window.location.href='../contacto/fm-contact-us.cgi'">
 		<span class="glyphicon glyphicon-comment"></span>
 	      </button>
@@ -197,7 +187,6 @@ _gaq.push(['_trackPageview']);
 
 	    <div class="nav-collapse collapse">
 	      <ul class="topnav nav navbar-nav navbar-nav-sm">		
-		<li class="dropdown-sm header-link"><a href="../tienda/tienda.html">Tienda</a></li>
 		<li class="dropdown dropdown-sm">
 		  <a class="dropdown-toggle" data-toggle="collapse">Servicios <b class="caret"></b></a>
 		  <ul class="nav navbar-nav-sub-sm">
@@ -214,9 +203,6 @@ _gaq.push(['_trackPageview']);
 		  <ul class="nav navbar-nav-sub-sm">
                     <li><a href="../productos/prioritix/prioritix.html">PrioritiX</a></li>
                     <li><a href="../productos/syschecker/syschecker.html">SysChecker</a></li>
-                    <li class="divider"></li>
-                    <li><a class="dropdown-item-adj" href="http://www.wisebirk.com" target="_blank">Wisebirk</a></li>
-                    <li><a class="dropdown-item-adj" href="http://www.ummahsocialbook.com" target="_blank">Ummah Social Book</a></li>
 		  </ul>
 		</li>
 		<li class="dropdown-sm header-link"><a href="../soporte/soporte.html">Soporte</a></li>
@@ -340,7 +326,7 @@ _gaq.push(['_trackPageview']);
       <footer class="footer-margin">
       <p lang="en"><a href="../../en/contact/fm-contact-us.cgi">English</a></p>
       <hr>
-      <p><a href="../tienda/tienda.html">Tienda</a> &middot; <a href="../soporte/soporte.html">Soporte</a> &middot; <a href="../acerca-de/quienes-somos.html">Quiénes Somos</a> &middot; <a href="../contacto/fm-contact-us.cgi">Contáctenos</a></p>
+      <p><a href="../soporte/soporte.html">Soporte</a> &middot; <a href="../acerca-de/quienes-somos.html">Quiénes Somos</a> &middot; <a href="../contacto/fm-contact-us.cgi">Contáctenos</a></p>
       <p>&copy; 2013 Sysformatics.</p>
       </footer>
 
